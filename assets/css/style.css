@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.hero-section {
+  background: no-repeat right url("../images/hero-background.svg");
+  height: 100vh;
+}
+
+#left-arrow:hover {
+  cursor: pointer;
+}
+
+#right-arrow:hover {
+  cursor: pointer;
+}
+
+/* Initial position of the content */
+#dynamic-content {
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+/* Slide out to the left */
+#dynamic-content.slide-out-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Slide in from the right */
+#dynamic-content.slide-in-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Slide out to the right */
+#dynamic-content.slide-out-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Slide in from the left */
+#dynamic-content.slide-in-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Reset to normal position after the transition */
+#dynamic-content.active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Features Section CSS */
+
+.feature-card-1 {
+  background: url("../images/feature-card-1-bg.svg") no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.feature-card-2 {
+  background: url("../images/feature-card-bg-2.svg") no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.feature-card-3 {
+  background: url("../images/feature-card-bg-3.svg") no-repeat center;
+  background-size: cover;
+  height: 350px;
+  border-radius: 20px;
+}
+
+@media (min-width: 767.98px) {
+  .divider {
+    display: block;
+    visibility: hidden;
+    font-size: 0;
+  }
+}
