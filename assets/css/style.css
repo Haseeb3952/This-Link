@@ -14,7 +14,7 @@
 }
 
 .hero-section {
-  background: no-repeat right url("../images/hero-background.svg");
+  background: no-repeat right url("../images/hero-background.png");
   height: 100vh;
 }
 
@@ -64,28 +64,92 @@
   transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
+#go-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  transition: opacity 0.4s, transform 0.4s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index: 99;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+#go-top-btn.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#go-top-btn i {
+  color: #fff;
+  font-size: 25px;
+}
+
+.navbar-toggler:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Features Section CSS */
 
 .feature-card-1 {
-  background: url("../images/feature-card-1-bg.svg") no-repeat center;
+  background: url("../images/feature-card-1-bg.png") no-repeat center;
   background-size: cover;
   height: 350px;
   border-radius: 20px;
 }
 
 .feature-card-2 {
-  background: url("../images/feature-card-bg-2.svg") no-repeat center;
+  background: url("../images/feature-card-2-bg.png") no-repeat center;
   background-size: cover;
   height: 350px;
   border-radius: 20px;
 }
 
 .feature-card-3 {
-  background: url("../images/feature-card-bg-3.svg") no-repeat center;
+  background: url("../images/feature-card-3-bg.png") no-repeat center;
   background-size: cover;
   height: 350px;
   border-radius: 20px;
 }
+
+.mobile-hidden {
+  display: block;
+}
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
+
+/* // XX-Large devices (larger desktops) */
+/* // No media query since the xxl breakpoint has no upper bound on its width */
 
 @media (min-width: 767.98px) {
   .divider {

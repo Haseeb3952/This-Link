@@ -55,3 +55,19 @@ rightArrow.addEventListener("click", () => {
     currentIndex === contentArray.length - 1 ? 0 : currentIndex + 1;
   updateContent(newIndex, "right");
 });
+
+// Go to Top Button Hide on Top of the Page
+
+const goTopBtn = document.getElementById("go-top-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    goTopBtn.classList.add("show");
+  } else {
+    goTopBtn.classList.remove("show");
+  }
+});
+
+goTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

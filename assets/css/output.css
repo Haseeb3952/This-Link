@@ -570,9 +570,22 @@ video {
   bottom: 1.75rem;
 }
 
+.tw-right-0{
+  right: 0px;
+}
+
+.tw-top-0{
+  top: 0px;
+}
+
 .tw-my-20{
   margin-top: 5rem;
   margin-bottom: 5rem;
+}
+
+.tw-my-36{
+  margin-top: 9rem;
+  margin-bottom: 9rem;
 }
 
 .tw-my-4{
@@ -582,6 +595,18 @@ video {
 
 .tw-flex{
   display: flex;
+}
+
+.tw-h-0\.5{
+  height: 0.125rem;
+}
+
+.tw-w-14{
+  width: 3.5rem;
+}
+
+.tw-justify-center{
+  justify-content: center;
 }
 
 .tw-justify-between{
@@ -617,9 +642,9 @@ video {
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
 }
 
-.tw-bg-buttonBackground{
+.tw-bg-customBackground{
   --tw-bg-opacity: 1;
-  background-color: rgb(11 161 38 / var(--tw-bg-opacity));
+  background-color: rgb(6 195 40 / var(--tw-bg-opacity));
 }
 
 .tw-bg-customColor{
@@ -665,6 +690,11 @@ video {
   padding-bottom: 1.75rem;
 }
 
+.tw-py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .tw-ps-3{
   padding-inline-start: 0.75rem;
 }
@@ -675,6 +705,10 @@ video {
 
 .tw-pt-3{
   padding-top: 0.75rem;
+}
+
+.tw-pt-7{
+  padding-top: 1.75rem;
 }
 
 .tw-pt-80{
@@ -739,7 +773,7 @@ video {
 }
 
 .hero-section {
-  background: no-repeat right url("../images/hero-background.svg");
+  background: no-repeat right url("../images/hero-background.png");
   height: 100vh;
 }
 
@@ -795,28 +829,99 @@ video {
   transition: transform 0.3s ease-in-out, opacity 0.3s;
 }
 
+#go-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  transition: opacity 0.4s, transform 0.4s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index: 99;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+#go-top-btn.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#go-top-btn i {
+  color: #fff;
+  font-size: 25px;
+}
+
+.navbar-toggler:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Features Section CSS */
 
 .feature-card-1 {
-  background: url("../images/feature-card-1-bg.svg") no-repeat center;
+  background: url("../images/feature-card-1-bg.png") no-repeat center;
   background-size: cover;
   height: 350px;
   border-radius: 20px;
 }
 
 .feature-card-2 {
-  background: url("../images/feature-card-bg-2.svg") no-repeat center;
+  background: url("../images/feature-card-2-bg.png") no-repeat center;
   background-size: cover;
   height: 350px;
   border-radius: 20px;
 }
 
 .feature-card-3 {
-  background: url("../images/feature-card-bg-3.svg") no-repeat center;
+  background: url("../images/feature-card-3-bg.png") no-repeat center;
   background-size: cover;
   height: 350px;
   border-radius: 20px;
 }
+
+.mobile-hidden {
+  display: block;
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+}
+
+/* // Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+}
+
+/* // Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+
+@media (max-width: 1399.98px) {
+}
+
+/* // XX-Large devices (larger desktops) */
+
+/* // No media query since the xxl breakpoint has no upper bound on its width */
 
 @media (min-width: 767.98px) {
   .divider {
@@ -832,20 +937,12 @@ video {
 }
 
 @media (min-width: 640px){
-  .sm\:tw-pt-10{
-    padding-top: 2.5rem;
-  }
-
   .sm\:tw-pt-72{
     padding-top: 18rem;
   }
 }
 
 @media (min-width: 1024px){
-  .lg\:tw-pt-20{
-    padding-top: 5rem;
-  }
-
   .lg\:tw-pt-80{
     padding-top: 20rem;
   }
