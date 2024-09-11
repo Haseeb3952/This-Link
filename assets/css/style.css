@@ -122,6 +122,25 @@
   border-radius: 20px;
 }
 
+/* How It Works CSS */
+
+.how-it-works-bg {
+  background: url("../images/how-it-works-bg.svg") no-repeat center;
+  background-size: cover;
+  height: max-content;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+}
+
+.btn-modal-close {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
+
 .mobile-hidden {
   display: block;
 }

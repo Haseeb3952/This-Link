@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         customColor: "#06C328",
+        featuresText: "#0000000A",
       },
       fontFamily: {
         fontExo: ['"Exo"', "sans-serif"],
@@ -14,6 +15,12 @@ module.exports = {
       backgroundColor: {
         customBackground: "#06C328",
         buttonBackground: "#0BA126",
+        featuresBackground: "#F1F5EF",
+        featuresDarkBg: "#095763",
+        featuresLightBg: "#D5E5D2",
+      },
+      boxShadow: {
+        customShadow: "0px 9px 46px 0px #00000030",
       },
     },
   },

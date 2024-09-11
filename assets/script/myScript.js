@@ -71,3 +71,23 @@ window.addEventListener("scroll", () => {
 goTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// Video on Screen
+
+document.getElementById("playIcon").addEventListener("click", function () {
+  // Replace with your desired YouTube video URL
+  const videoURL = "https://www.youtube.com/embed/_qEG9X3G7q0";
+
+  document.getElementById("youtubeVideo").src = videoURL;
+
+  // Show the modal
+  var myModal = new bootstrap.Modal(document.getElementById("videoModal"));
+  myModal.show();
+});
+
+// Clear video when modal is hidden
+document
+  .getElementById("videoModal")
+  .addEventListener("hidden.bs.modal", function () {
+    document.getElementById("youtubeVideo").src = "";
+  });
