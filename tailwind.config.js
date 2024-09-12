@@ -18,6 +18,9 @@ module.exports = {
         featuresBackground: "#F1F5EF",
         featuresDarkBg: "#095763",
         featuresLightBg: "#D5E5D2",
+        testimonialBackground: "#F2F2F2",
+        inputBackground: "#F5F5F5",
+        contactBackground: "#D5E5D2",
       },
       boxShadow: {
         customShadow: "0px 9px 46px 0px #00000030",
