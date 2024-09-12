@@ -14,7 +14,7 @@
 }
 
 .hero-section {
-  background: no-repeat right url("../images/hero-background.png");
+  background: no-repeat right url("../images/hero-background.svg");
   height: 100vh;
 }
 
@@ -152,6 +152,7 @@
   align-items: center !important;
   color: #06c328 !important;
   font-size: 15px !important;
+  border-radius: 5px !important;
 }
 
 .slick-next:before {
@@ -167,7 +168,7 @@
 .slick-prev {
   background-color: #ffffff !important;
   box-shadow: 0px 0px 26px 0px #0000001c !important;
-
+  border-radius: 5px !important;
   padding: 20px !important;
   left: -60px !important;
   display: flex !important;
@@ -209,6 +210,29 @@
   border-radius: 0px 0px 94px 0px;
 }
 
+.footer-link-underline {
+  text-decoration: underline;
+  text-decoration-color: #06c328;
+  text-decoration-style: solid;
+}
+
+.email-placeholder::placeholder {
+  color: white !important;
+}
+
+.input-reset-style {
+  background-color: #21212180 !important;
+}
+
+.input-reset-style:focus {
+  border: 1px solid #ced4da !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.footer {
+  background-color: #07444eb0;
+}
 .mobile-hidden {
   display: block;
 }
