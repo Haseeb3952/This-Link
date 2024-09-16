@@ -332,257 +332,683 @@
                 aria-labelledby="pills-jobs-tab"
               >
                 <div class="row">
-                  <div class="col-12 col-lg-3">
-                    <div
-                      class="tw-border h-100 tw-mx-2 tw-shadow-md tw-rounded-lg"
-                    >
-                      <div class="tw-p-2">
-                        <div
-                          class="d-flex justify-content-between align-items-center gap-2"
+                  <div class="col-12 col-lg-4">
+                    <nav>
+                      <div
+                        class="nav nav-tabs tw-mx-2 tw-my-2"
+                        id="nav-tab"
+                        role="tablist"
+                      >
+                        <button
+                          class="nav-link active"
+                          id="nav-home-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#nav-home"
+                          type="button"
+                          role="tab"
+                          aria-controls="nav-home"
+                          aria-selected="true"
                         >
-                          <div>
+                          Staff
+                        </button>
+                        <button
+                          class="nav-link"
+                          id="nav-profile-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#nav-profile"
+                          type="button"
+                          role="tab"
+                          aria-controls="nav-profile"
+                          aria-selected="false"
+                        >
+                          Equipments
+                        </button>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="nav-home"
+                        role="tabpanel"
+                        aria-labelledby="nav-home-tab"
+                      >
+                        <div
+                          class="tw-border h-100 tw-mx-2 tw-shadow-md tw-rounded-lg"
+                        >
+                          <div class="tw-p-2">
                             <div
-                              class="input-group tw-w-32 border-1 tw-rounded-sm"
+                              class="d-flex justify-content-between align-items-center gap-2"
                             >
-                              <span
-                                class="input-group-text tw-bg-white tw-border-0"
-                                id="basic-addon1"
-                              >
-                                <img
-                                  src="../assets/images/search-icon.svg"
-                                  class="img-fluid"
-                                  alt=""
-                                />
-                              </span>
-                              <input
-                                type="text"
-                                class="form-control tw-border-0 bootstrap-input-reset-style"
-                                placeholder="Search"
-                                aria-label="Username"
-                                aria-describedby="basic-addon1"
-                              />
+                              <div>
+                                <div
+                                  class="input-group tw-w-52 border-1 tw-rounded-sm"
+                                >
+                                  <span
+                                    class="input-group-text tw-bg-white tw-border-0"
+                                    id="basic-addon1"
+                                  >
+                                    <img
+                                      src="../assets/images/search-icon.svg"
+                                      class="img-fluid"
+                                      alt=""
+                                    />
+                                  </span>
+                                  <input
+                                    type="text"
+                                    class="form-control tw-border-0 bootstrap-input-reset-style"
+                                    placeholder="Search"
+                                    aria-label="Username"
+                                    aria-describedby="basic-addon1"
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <select
+                                  class="form-select bootstrap-input-reset-style tw-bg-slate-50"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Available</option>
+                                  <option value="1">Not Available</option>
+                                  <option value="2">On Leave</option>
+                                  <option value="3">Busy</option>
+                                  <option value="4">In a Meeting</option>
+                                </select>
+                              </div>
                             </div>
                           </div>
-                          <div>
-                            <select
-                              class="form-select bootstrap-input-reset-style tw-bg-slate-50"
-                              aria-label="Default select example"
-                            >
-                              <option selected>Available</option>
-                              <option value="1">Not Available</option>
-                              <option value="2">On Leave</option>
-                              <option value="3">Busy</option>
-                              <option value="4">In a Meeting</option>
-                            </select>
+                          <hr class="tw-my-1" />
+                          <div class="tw-p-3">
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-woman-laughing-covers-her-mouth_23-2148859506.jpg?t=st=1726494801~exp=1726498401~hmac=462b20a943ee3c441805c5e6944562a85a7f7d7f85fb936315b1ab079f767a43&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgOrange"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?t=st=1726494839~exp=1726498439~hmac=9256c13e42cb2bb41f396de52e697d62819a2a3945cd781723b72d46927a950b&w=826"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgJellyFish"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/front-view-smiley-business-man_23-2148479583.jpg?t=st=1726494883~exp=1726498483~hmac=227b2299624c95606d7ec688518681573e41e358106a60b82b80b614755f0036&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgPurple"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgLightGreen"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgJellyFish"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgOrange"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgLightGreen"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-2">
+                                <div class="staff-image">
+                                  <img
+                                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
+                                    class="img-fluid tw-rounded-full tw-shadow-lg tw-object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <hr class="tw-my-1" />
-                      <div class="tw-p-3">
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
+                      <div
+                        class="tab-pane fade"
+                        id="nav-profile"
+                        role="tabpanel"
+                        aria-labelledby="nav-profile-tab"
+                      >
+                        <div
+                          class="tw-border h-100 tw-mx-2 tw-shadow-md tw-rounded-lg"
+                        >
+                          <div class="tw-p-2">
+                            <div
+                              class="d-flex justify-content-between align-items-center gap-2"
+                            >
+                              <div>
+                                <div
+                                  class="input-group tw-w-52 border-1 tw-rounded-sm"
+                                >
+                                  <span
+                                    class="input-group-text tw-bg-white tw-border-0"
+                                    id="basic-addon1"
+                                  >
+                                    <img
+                                      src="../assets/images/search-icon.svg"
+                                      class="img-fluid"
+                                      alt=""
+                                    />
+                                  </span>
+                                  <input
+                                    type="text"
+                                    class="form-control tw-border-0 bootstrap-input-reset-style"
+                                    placeholder="Search"
+                                    aria-label="Username"
+                                    aria-describedby="basic-addon1"
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <select
+                                  class="form-select bootstrap-input-reset-style tw-bg-slate-50"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Available</option>
+                                  <option value="1">Not Available</option>
+                                  <option value="2">On Leave</option>
+                                  <option value="3">Busy</option>
+                                  <option value="4">In a Meeting</option>
+                                </select>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
-                              >
-                                2
-                              </button>
+                          <hr class="tw-my-1" />
+                          <div class="tw-p-3">
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-7 col-7">
+                                <div>
+                                  <h6 class="tw-font-bold">Equipment</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgOrange"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgOrange"
-                              >
-                                1
-                              </button>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgJellyFish"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgPurple"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgJellyFish"
-                              >
-                                2
-                              </button>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgLightGreen"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgPurple"
-                              >
-                                2
-                              </button>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgJellyFish"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgOrange"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgLightGreen"
-                              >
-                                1
-                              </button>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgLightGreen"
+                                  >
+                                    1
+                                  </button>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
-                              >
-                                1
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgJellyFish"
-                              >
-                                2
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgOrange"
-                              >
-                                1
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgLightGreen"
-                              >
-                                1
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row tw-my-2 align-items-center">
-                          <div class="col-lg-7 col-7">
-                            <div>
-                              <h6 class="tw-font-bold">Abdul Haseeb</h6>
-                              <p class="d-flex gap-2">
-                                <span class="tw-text-gray-500"> Total </span>
-                                <span class="tw-font-bold">2</span>
-                              </p>
-                            </div>
-                          </div>
-                          <div class="col-5">
-                            <div>
-                              <button
-                                class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
-                              >
-                                2
-                              </button>
+                            <div class="row tw-my-2 align-items-center">
+                              <div class="col-lg-5 col-5">
+                                <div>
+                                  <h6 class="tw-font-bold">Abdul Haseeb</h6>
+                                  <p class="d-flex gap-2">
+                                    <span class="tw-text-gray-500">
+                                      Total
+                                    </span>
+                                    <span class="tw-font-bold">2</span>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-5">
+                                <div>
+                                  <button
+                                    class="tw-py-2 w-100 tw-px-10 tw-rounded-lg tw-font-semibold tw-text-white tw-bg-btnBgDarkGreen"
+                                  >
+                                    2
+                                  </button>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 col-lg-6">
+                  <div class="col-12 col-lg-5">
                     <div class="">
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.8501433795113!2d74.27540547397928!3d31.47330824946864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919039b9c308619%3A0xaa4c1cdc57640f02!2sHORIZAM!5e0!3m2!1sen!2s!4v1726480681135!5m2!1sen!2s"

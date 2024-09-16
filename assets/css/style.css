@@ -479,6 +479,16 @@
   color: #9ca3af;
 }
 
+.staff-image {
+  height: 45px;
+  width: 45px;
+}
+
+.staff-image img {
+  height: 100%;
+  width: 100%;
+  border: 2px solid #ccc;
+}
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .mobile-hidden {
