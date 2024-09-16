@@ -13,6 +13,13 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Bootstrap Reset */
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .hero-section {
   background: no-repeat right url("../images/hero-background.png");
   height: 100vh;
@@ -97,6 +104,11 @@
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+.about-us-section {
+  background: url("../images/stylish-line.svg") no-repeat;
+  background-position: bottom left;
 }
 
 /* Features Section CSS */
@@ -206,6 +218,11 @@
   outline: none !important;
 }
 
+.bootstrap-input-reset-style:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 .contact-border {
   border-radius: 0px 0px 94px 0px;
 }
@@ -236,6 +253,232 @@
 .mobile-hidden {
   display: block;
 }
+
+/* Dashboard Page CSS */
+
+.btn-reset-style:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.flag-dropdown {
+  overflow-y: scroll !important;
+  height: 205px !important;
+}
+
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+.navbar-nav .nav-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 15px;
+  width: 1px;
+  background-color: #121212; /* or any color you prefer */
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.custom-nav-tabs.active {
+  background-color: #ffdd38 !important;
+  color: black !important;
+}
+
+.date-range-selector {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fafafb;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.date-range-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-range-text .days {
+  font-weight: bold;
+}
+
+.date-range-text .dates {
+  color: #555;
+}
+
+.dropdown-icon {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+/* Date Picker Styling */
+.date-picker-container {
+  display: none;
+  margin-top: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 40px;
+}
+
+.date-picker-container input {
+  margin-right: 10px;
+}
+
+.personal-info {
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  border: 2px solid green;
+}
+
+.file-input {
+  display: none;
+}
+
+/* Custom button styles */
+.file-upload-btn {
+  background-color: #3b7471;
+  color: white;
+  padding: 10px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.file-upload-btn:hover {
+  background-color: #237156;
+}
+
+/* Button focus effect */
+.file-upload-btn:focus {
+  outline: none;
+  /* box-shadow: 0 0 5px #2b8e6e; */
+}
+
+.custom-date-container {
+  position: relative;
+}
+
+.custom-date-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the arrow */
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  background-color: #f3f4f6;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.custom-date-input:focus {
+  /* border-color: #4ade80; */
+  outline: none;
+  /* box-shadow: 0 0 5px rgba(72, 187, 120, 0.5); */
+}
+
+/* Right-side arrow */
+.date-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the arrow from blocking clicks */
+}
+
+/* Optional: Style the placeholder to always be aligned to the left */
+.custom-date-input::placeholder {
+  color: #9ca3af;
+}
+
+.custom-month-container {
+  position: relative;
+  /* width: 250px; */
+}
+
+.custom-month-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the arrow */
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  background-color: #f3f4f6;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.custom-month-input:focus {
+  /* border-color: #4ade80; */
+  outline: none;
+  /* box-shadow: 0 0 5px rgba(72, 187, 120, 0.5); */
+}
+
+/* Right-side arrow */
+.month-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the arrow from blocking clicks */
+}
+
+/* Placeholder styling */
+.custom-month-input::placeholder {
+  color: #9ca3af;
+}
+.custom-year-container {
+  position: relative;
+}
+
+.custom-year-input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px; /* Add space for the arrow */
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  background-color: #f3f4f6;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.custom-year-input:focus {
+  /* border-color: #4ade80; */
+  outline: none;
+  /* box-shadow: 0 0 5px rgba(72, 187, 120, 0.5); */
+}
+
+/* Right-side arrow */
+.year-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the arrow from blocking clicks */
+}
+
+/* Placeholder styling */
+.custom-year-input::placeholder {
+  color: #9ca3af;
+}
+
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .mobile-hidden {

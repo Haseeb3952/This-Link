@@ -1,12 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   prefix: "tw-",
-  content: ["./index.html"],
+  content: [
+    "./index.html",
+    "./pages/dashboard.html",
+    "./pages/staff-creation.html",
+    "./pages/professional-details",
+  ],
   theme: {
     extend: {
       colors: {
         customColor: "#06C328",
         featuresText: "#0000000A",
+        lightBlue: "#6B86BB",
+        darkGreen: "#245553",
       },
       fontFamily: {
         fontExo: ['"Exo"', "sans-serif"],
@@ -23,9 +30,19 @@ module.exports = {
         contactBackground: "#D5E5D2",
         footerBackground: "#D5E5D2",
         sociaMediaBackground: "#07444E",
+        navAndTabsBackground: "FFDD38",
+        btnAddJob: "#3B7471",
+        btnBgDarkGreen: "#3B7471",
+        btnBgOrange: "#FF8E00",
+        btnBgJellyFish: "#4ECFCA",
+        btnBgPurple: "#BC5DC6",
+        btnBgLightGreen: "#59AC4B",
       },
       boxShadow: {
         customShadow: "0px 9px 46px 0px #00000030",
+      },
+      borderColor: {
+        staffBtnBorder: "#3B7471",
       },
     },
   },

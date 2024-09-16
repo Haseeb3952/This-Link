@@ -91,3 +91,52 @@ document
   .addEventListener("hidden.bs.modal", function () {
     document.getElementById("youtubeVideo").src = "";
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dateRangeSelector = document.getElementById("dateRangeSelector");
+  const datePickerContainer = document.getElementById("datePickerContainer");
+  const startDateInput = document.getElementById("startDate");
+  const endDateInput = document.getElementById("endDate");
+  const applyButton = document.getElementById("applyButton");
+  const daysCountSpan = document.getElementById("daysCount");
+  const dateRangeSpan = document.getElementById("dateRange");
+
+  // Toggle date picker visibility
+  dateRangeSelector.addEventListener("click", function () {
+    if (datePickerContainer.style.display === "block") {
+      datePickerContainer.style.display = "none";
+    } else {
+      datePickerContainer.style.display = "block";
+    }
+  });
+
+  // Function to calculate the difference in days
+  function calculateDays(start, end) {
+    const startDate = new Date(start);
+    const endDate = new Date(end);
+    const diffTime = Math.abs(endDate - startDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // Including start date
+    return diffDays;
+  }
+
+  // Function to format the date to a readable format (e.g., May 19)
+  function formatDate(date) {
+    const options = { month: "short", day: "numeric" };
+    return new Date(date).toLocaleDateString("en-US", options);
+  }
+
+  // Apply the selected dates and update the display
+  applyButton.addEventListener("click", function () {
+    const startDate = startDateInput.value;
+    const endDate = endDateInput.value;
+
+    if (startDate && endDate) {
+      const daysCount = calculateDays(startDate, endDate);
+      daysCountSpan.textContent = `${daysCount} Days`;
+      dateRangeSpan.textContent = `${formatDate(startDate)} - ${formatDate(
+        endDate
+      )}`;
+      datePickerContainer.style.display = "none"; // Hide the picker after selection
+    }
+  });
+});
