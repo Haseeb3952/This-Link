@@ -676,6 +676,100 @@ div:where(.swal2-container) .swal2-html-container {
   font-size: 9px;
 }
 
+/* Styling for Examination Certificate */
+.file-drop-zone.exam-certificate {
+  border: 2px dashed #237156;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f0f8ff;
+  margin-bottom: 20px;
+}
+
+.browse-exam-certificate {
+  color: #237156;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Uploaded Examination Certificate Files Preview Section */
+#examCertificateFileList .file-item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+#examCertificateFileList .file-name {
+  font-weight: bold;
+}
+
+#examCertificateFileList .file-size-display {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+#examCertificateFileList .delete-icon {
+  cursor: pointer;
+}
+
+#examCertificateFileList .delete-icon img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+/* Styling for User Manual Details */
+.file-drop-zone.user-manual {
+  border: 2px dashed #237156;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f0f8ff;
+  margin-bottom: 20px;
+}
+
+.browse-user-manual {
+  color: #237156;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Uploaded User Manual Files Preview Section */
+#userManualFileList .file-item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+#userManualFileList .file-name {
+  font-weight: bold;
+}
+
+#userManualFileList .file-size-display {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+#userManualFileList .delete-icon {
+  cursor: pointer;
+}
+
+#userManualFileList .delete-icon img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .mobile-hidden {

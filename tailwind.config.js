@@ -6,6 +6,7 @@ module.exports = {
     "./pages/dashboard.html",
     "./pages/contractors.html",
     "./pages/equipments.html",
+    "./pages/equipments-creation.html",
     "./pages/staff.html",
     "./pages/staff-creation.html",
     "./pages/job-creation.html",

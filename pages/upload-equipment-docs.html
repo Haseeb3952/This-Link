@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <title>This Link - Staff Creation</title>
+    <title>This Link - Equipment Creation</title>
   </head>
   <body>
     <section>
@@ -204,20 +204,24 @@
             <div class="tw-border tw-rounded-lg tw-shadow">
               <div class="row tw-p-3 gy-3">
                 <div class="col-auto">
-                  <div>
+                  <a href="./equipments-creation.html">
                     <button
-                      class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-gray-100 d-flex align-items-center gap-3"
+                      class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
                     >
                       <div
-                        class="tw-size-5 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
+                        class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
                       >
-                        1
+                        <img
+                          src="../assets/images/check-icon.svg"
+                          class="img-fluid"
+                          alt=""
+                        />
                       </div>
-                      <div class="tw-text-green-700 tw-font-medium">
-                        Personal Information
+                      <div class="tw-text-white tw-font-medium">
+                        Equipemnt Information
                       </div>
                     </button>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-auto">
                   <div>
@@ -231,7 +235,7 @@
                           2
                         </div>
                         <div class="tw-text-gray-400 tw-font-medium">
-                          Professional Details
+                          Upload Documnets
                         </div>
                       </button>
                     </a>
@@ -239,18 +243,20 @@
                 </div>
                 <div class="col-auto">
                   <div>
-                    <button
-                      class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
-                    >
-                      <div
-                        class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                    <a href="./equipment-usage.html">
+                      <button
+                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
                       >
-                        3
-                      </div>
-                      <div class="tw-text-gray-400 tw-font-medium">
-                        Application Form
-                      </div>
-                    </button>
+                        <div
+                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                        >
+                          3
+                        </div>
+                        <div class="tw-text-gray-400 tw-font-medium">
+                          Usage Details
+                        </div>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -259,77 +265,71 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="sm:tw-px-12 lg:tw-px-20">
-                      <h4 class="tw-py-5 tw-font-semibold">
-                        Add Personal Information
-                      </h4>
-                      <div
-                        class="d-flex justify-content-center align-items-center"
-                      >
-                        <div class="profile-picture tw-border tw-rounded-lg">
-                          <img
-                            src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
-                            class="img-fluid tw-size-32 tw-rounded-lg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <div class="text-center tw-my-2">
-                        <input
-                          type="file"
-                          id="fileInput"
-                          class="file-input"
-                          accept="image/*"
-                        />
-
-                        <button
-                          class="file-upload-btn"
-                          onclick="document.getElementById('fileInput').click()"
-                        >
-                          Upload a Picture
-                        </button>
-                      </div>
                       <form class="tw-my-10">
                         <div class="row gy-3">
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Name</label
+                              >Type</label
                             >
                             <input
                               type="text"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Name"
+                              placeholder="Certification Type"
+                            />
+                          </div>
+                          <!-- Examination Certificate Upload Zone -->
+                          <div class="file-drop-zone exam-certificate">
+                            <div class="file-drop-zone-inner">
+                              <span
+                                class="icon d-flex justify-content-center align-items-center"
+                              >
+                                <img
+                                  src="../assets/images/file-upload-icon.svg"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </span>
+                              <p>
+                                Drag & drop Examination Certificate file or
+                                <span class="browse-exam-certificate"
+                                  >browse file</span
+                                >
+                              </p>
+                              <p class="file-size">Max size: 20Mb</p>
+                              <input
+                                type="file"
+                                id="examCertificateFileInput"
+                                hidden
+                                multiple
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-12 col-lg-6">
+                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
+                              >Effective Date</label
+                            >
+                            <input
+                              type="date"
+                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                              placeholder="02:00 AM - 04:00 PM"
+                              id="date-input"
                             />
                           </div>
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Surname</label
+                              >Expirey Date</label
                             >
                             <input
-                              type="text"
+                              type="date"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Surname"
+                              placeholder="02:00 AM - 04:00 PM"
+                              id="expirey-date-input"
                             />
                           </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Phone Number</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Phone Number"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Email</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="name@email.com"
-                            />
-                          </div>
+
+                          <!-- Uploaded Examination Certificate Files Preview Section -->
+                          <div id="examCertificateFileList"></div>
                         </div>
                       </form>
                     </div>
@@ -354,70 +354,101 @@
     </section>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dateRangeSelector = document.getElementById("dateRangeSelector");
-        const datePickerContainer = document.getElementById(
-          "datePickerContainer"
-        );
-        const startDateInput = document.getElementById("startDate");
-        const endDateInput = document.getElementById("endDate");
-        const applyButton = document.getElementById("applyButton");
-        const daysCountSpan = document.getElementById("daysCount");
-        const dateRangeSpan = document.getElementById("dateRange");
+      // Examination Certificate Logic
+      const examCertificateDropZone = document.querySelector(
+        ".file-drop-zone.exam-certificate"
+      );
+      const examCertificateFileInput = document.querySelector(
+        "#examCertificateFileInput"
+      );
+      const examCertificateFileList = document.getElementById(
+        "examCertificateFileList"
+      );
 
-        // Toggle date picker visibility
-        dateRangeSelector.addEventListener("click", function () {
-          if (datePickerContainer.style.display === "block") {
-            datePickerContainer.style.display = "none";
-          } else {
-            datePickerContainer.style.display = "block";
-          }
-        });
-
-        // Function to calculate the difference in days
-        function calculateDays(start, end) {
-          const startDate = new Date(start);
-          const endDate = new Date(end);
-          const diffTime = Math.abs(endDate - startDate);
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // Including start date
-          return diffDays;
-        }
-
-        // Function to format the date to a readable format (e.g., May 19)
-        function formatDate(date) {
-          const options = { month: "short", day: "numeric" };
-          return new Date(date).toLocaleDateString("en-US", options);
-        }
-
-        // Apply the selected dates and update the display
-        applyButton.addEventListener("click", function () {
-          const startDate = startDateInput.value;
-          const endDate = endDateInput.value;
-
-          if (startDate && endDate) {
-            const daysCount = calculateDays(startDate, endDate);
-            daysCountSpan.textContent = `${daysCount} Days`;
-            dateRangeSpan.textContent = `${formatDate(
-              startDate
-            )} - ${formatDate(endDate)}`;
-            datePickerContainer.style.display = "none"; // Hide the picker after selection
-          }
-        });
+      // Handle drag and drop for Examination Certificate
+      examCertificateDropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        examCertificateDropZone.classList.add("dragover");
       });
+
+      examCertificateDropZone.addEventListener("dragleave", () => {
+        examCertificateDropZone.classList.remove("dragover");
+      });
+
+      examCertificateDropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        examCertificateDropZone.classList.remove("dragover");
+
+        const files = event.dataTransfer.files;
+        handleExamCertificateFiles(files);
+      });
+
+      document
+        .querySelector(".browse-exam-certificate")
+        .addEventListener("click", () => {
+          examCertificateFileInput.click();
+        });
+
+      examCertificateFileInput.addEventListener("change", (event) => {
+        const files = event.target.files;
+        handleExamCertificateFiles(files);
+      });
+
+      function handleExamCertificateFiles(files) {
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2);
+
+          if (fileSizeInMB <= 20) {
+            const fileItem = document.createElement("div");
+            fileItem.classList.add("file-item");
+
+            const fileNameDisplay = document.createElement("span");
+            fileNameDisplay.classList.add("file-name");
+            fileNameDisplay.textContent = file.name;
+
+            const fileSizeDisplay = document.createElement("span");
+            fileSizeDisplay.classList.add("file-size-display");
+            fileSizeDisplay.textContent = `${fileSizeInMB} Mb`;
+
+            // Create delete icon for Examination Certificate
+            const deleteIcon = document.createElement("span");
+            deleteIcon.classList.add("delete-icon");
+            const deleteImg = document.createElement("img");
+            deleteImg.src = "../assets/images/cross-icon.svg"; // Custom delete icon
+            deleteIcon.appendChild(deleteImg);
+
+            // Add click event to remove the file
+            deleteIcon.addEventListener("click", () => {
+              fileItem.remove();
+            });
+
+            fileItem.appendChild(fileNameDisplay);
+            fileItem.appendChild(fileSizeDisplay);
+            fileItem.appendChild(deleteIcon);
+
+            examCertificateFileList.appendChild(fileItem);
+          } else {
+            alert(`File size exceeds 20Mb limit: ${file.name}`);
+          }
+        }
+      }
     </script>
 
     <script>
-      const fileInput = document.getElementById("fileInput");
+      // Get the current date
+      const today = new Date().toISOString().split("T")[0];
 
-      fileInput.addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (file) {
-          console.log("File selected:", file.name);
-          // You can now process the uploaded image file
-        }
-      });
+      // Set the value of the input to the current date
+      document.getElementById("date-input").value = today;
     </script>
+    <script>
+      // Get the current date
+      const expirey_date = new Date().toISOString().split("T")[0];
 
+      // Set the value of the input to the current date
+      document.getElementById("expirey-date-input").value = expirey_date;
+    </script>
     <script src="../assets/script/myScript.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
