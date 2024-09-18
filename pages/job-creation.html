@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <title>This Link - Staff Creation</title>
+    <title>This Link - Job Creation</title>
   </head>
   <body>
     <section>
@@ -174,7 +174,7 @@
             <div class="row my-2">
               <div class="col-12 col-lg-6">
                 <div class="tw-py-3">
-                  <h2 class="tw-font-bold">Add New Staff</h2>
+                  <h2 class="tw-font-bold">Add New Job</h2>
                 </div>
               </div>
               <div class="col-12 col-lg-6">
@@ -189,7 +189,7 @@
                     </button>
                   </div>
                   <div>
-                    <a href="./professional-details.html">
+                    <a href="./required-resources.html">
                       <button
                         class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
                       >
@@ -214,14 +214,14 @@
                         1
                       </div>
                       <div class="tw-text-green-700 tw-font-medium">
-                        Personal Information
+                        Job Details
                       </div>
                     </button>
                   </div>
                 </div>
                 <div class="col-auto">
                   <div>
-                    <a href="./professional-details.html">
+                    <a href="./required-resources.html">
                       <button
                         class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
                       >
@@ -231,7 +231,7 @@
                           2
                         </div>
                         <div class="tw-text-gray-400 tw-font-medium">
-                          Professional Details
+                          Required Resources
                         </div>
                       </button>
                     </a>
@@ -239,18 +239,20 @@
                 </div>
                 <div class="col-auto">
                   <div>
-                    <button
-                      class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
-                    >
-                      <div
-                        class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                    <a href="./job-application-form.html">
+                      <button
+                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
                       >
-                        3
-                      </div>
-                      <div class="tw-text-gray-400 tw-font-medium">
-                        Application Form
-                      </div>
-                    </button>
+                        <div
+                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                        >
+                          3
+                        </div>
+                        <div class="tw-text-gray-400 tw-font-medium">
+                          Application Form
+                        </div>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -258,77 +260,101 @@
               <div class="tw-p-2">
                 <div class="row">
                   <div class="col-12">
-                    <div class="sm:tw-px-12 lg:tw-px-20">
-                      <h4 class="tw-py-5 tw-font-semibold">
-                        Add Personal Information
-                      </h4>
-                      <div
-                        class="d-flex justify-content-center align-items-center"
-                      >
-                        <div class="profile-picture">
-                          <img
-                            src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
-                            class="img-fluid tw-size-32 tw-rounded-3xl"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <div class="text-center tw-my-2">
-                        <input
-                          type="file"
-                          id="fileInput"
-                          class="file-input"
-                          accept="image/*"
-                        />
-
-                        <button
-                          class="file-upload-btn"
-                          onclick="document.getElementById('fileInput').click()"
-                        >
-                          Upload a Picture
-                        </button>
-                      </div>
-                      <form class="tw-my-10">
+                    <div
+                      class="sm:tw-px-12 lg:tw-px-20 sm:tw-pb-20 lg:tw-pb-10"
+                    >
+                      <h4 class="tw-py-5 tw-font-semibold">Add Job Details</h4>
+                      <form>
                         <div class="row gy-3">
-                          <div class="col-12 col-lg-6">
+                          <div class="col-12">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Name</label
+                              >Job Title</label
                             >
                             <input
                               type="text"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Name"
+                              placeholder="Enter Job Title"
                             />
                           </div>
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Surname</label
+                              >Customer</label
                             >
                             <input
                               type="text"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Surname"
+                              placeholder="Customer Name"
                             />
                           </div>
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Phone Number</label
+                              >Job Owner</label
                             >
-                            <input
-                              type="number"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Phone Number"
-                            />
+                            <select
+                              class="form-select tw-text-gray-500 bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Select Job Owner</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
                           </div>
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Email</label
+                              >Job Type</label
+                            >
+                            <select
+                              class="form-select tw-text-gray-500 bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                              aria-label="Default select example"
+                            >
+                              <option selected>Select Job Type</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
+                              >Hours Booked</label
                             >
                             <input
                               type="text"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="name@email.com"
+                              placeholder="02:00 AM - 04:00 PM"
                             />
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
+                              >Recruitment Period</label
+                            >
+                            <input
+                              type="date"
+                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                              placeholder="02:00 AM - 04:00 PM"
+                              id="date-input"
+                            />
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
+                              >Location</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                              placeholder="Choose Location"
+                            />
+                          </div>
+                          <div class="col-12">
+                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
+                              >Job Description</label
+                            >
+                            <textarea
+                              name=""
+                              rows="3"
+                              class="form-control bootstrap-input-reset-style"
+                              id=""
+                            ></textarea>
                           </div>
                         </div>
                       </form>
@@ -416,6 +442,14 @@
           // You can now process the uploaded image file
         }
       });
+    </script>
+
+    <script>
+      // Get the current date
+      const today = new Date().toISOString().split("T")[0];
+
+      // Set the value of the input to the current date
+      document.getElementById("date-input").value = today;
     </script>
 
     <script src="../assets/script/myScript.js"></script>

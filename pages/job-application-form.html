@@ -12,11 +12,22 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <title>This Link - Staff Creation</title>
+    <title>This Link - Job Application Form</title>
   </head>
   <body>
     <section>
@@ -174,7 +185,7 @@
             <div class="row my-2">
               <div class="col-12 col-lg-6">
                 <div class="tw-py-3">
-                  <h2 class="tw-font-bold">Add New Staff</h2>
+                  <h2 class="tw-font-bold">Add New Job</h2>
                 </div>
               </div>
               <div class="col-12 col-lg-6">
@@ -189,54 +200,64 @@
                     </button>
                   </div>
                   <div>
-                    <a href="./professional-details.html">
-                      <button
-                        class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
-                      >
-                        Next
-                      </button>
-                    </a>
+                    <button
+                      id="publishButton"
+                      class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
+                    >
+                      Publish
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="tw-border tw-rounded-lg tw-shadow">
+            <div class="tw-border tw-rounded-lg tw-shadow tw-mb-4">
               <div class="row tw-p-3 gy-3">
                 <div class="col-auto">
                   <div>
-                    <button
-                      class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-gray-100 d-flex align-items-center gap-3"
-                    >
-                      <div
-                        class="tw-size-5 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
-                      >
-                        1
-                      </div>
-                      <div class="tw-text-green-700 tw-font-medium">
-                        Personal Information
-                      </div>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <div>
-                    <a href="./professional-details.html">
+                    <a href="./job-creation.html">
                       <button
-                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                        class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
                       >
                         <div
-                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                          class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
                         >
-                          2
+                          <img
+                            src="../assets/images/check-icon.svg"
+                            class="img-fluid"
+                            alt=""
+                          />
                         </div>
-                        <div class="tw-text-gray-400 tw-font-medium">
-                          Professional Details
+                        <div class="tw-text-white tw-font-medium">
+                          Job Details
                         </div>
                       </button>
                     </a>
                   </div>
                 </div>
+                <div class="col-auto">
+                  <div>
+                    <a href="./required-resources.html">
+                      <button
+                        class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
+                      >
+                        <div
+                          class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
+                        >
+                          <img
+                            src="../assets/images/check-icon.svg"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                        <div class="tw-text-white tw-font-medium">
+                          Required Resources
+                        </div>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
                 <div class="col-auto">
                   <div>
                     <button
@@ -258,77 +279,89 @@
               <div class="tw-p-2">
                 <div class="row">
                   <div class="col-12">
-                    <div class="sm:tw-px-12 lg:tw-px-20">
+                    <div class="sm:tw-px-12 lg:tw-px-20 tw-pb-32">
                       <h4 class="tw-py-5 tw-font-semibold">
-                        Add Personal Information
+                        Add Required Documents
                       </h4>
-                      <div
-                        class="d-flex justify-content-center align-items-center"
-                      >
-                        <div class="profile-picture">
-                          <img
-                            src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
-                            class="img-fluid tw-size-32 tw-rounded-3xl"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <div class="text-center tw-my-2">
-                        <input
-                          type="file"
-                          id="fileInput"
-                          class="file-input"
-                          accept="image/*"
-                        />
-
-                        <button
-                          class="file-upload-btn"
-                          onclick="document.getElementById('fileInput').click()"
-                        >
-                          Upload a Picture
-                        </button>
-                      </div>
-                      <form class="tw-my-10">
+                      <form>
                         <div class="row gy-3">
-                          <div class="col-12 col-lg-6">
+                          <div class="col-12">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Name</label
+                              >Signatory Document</label
                             >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Name"
-                            />
+                            <br />
+
+                            <div class="file-drop-zone">
+                              <div class="file-drop-zone-inner">
+                                <span
+                                  class="icon d-flex justify-content-center align-items-center"
+                                >
+                                  <img
+                                    src="../assets/images/file-upload-icon.svg"
+                                    class="img-fluid"
+                                    alt=""
+                                  />
+                                </span>
+                                <p>
+                                  Drag & drop file or
+                                  <span class="browse-file">browse file</span>
+                                </p>
+                                <p class="file-size">Max size: 20Mb</p>
+                                <input
+                                  type="file"
+                                  id="fileInput"
+                                  hidden
+                                  multiple
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Uploaded Files Preview Section -->
+                            <div id="fileList"></div>
+
+                            <!-- Uploaded Files Preview Section -->
+                            <div id="fileList"></div>
+
+                            <div id="fileList"></div>
                           </div>
-                          <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="row gy-3 tw-mt-10">
+                          <div class="col-12">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Surname</label
+                              >Read-Only Document</label
                             >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Surname"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Phone Number</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Phone Number"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Email</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="name@email.com"
-                            />
+                            <br />
+
+                            <!-- Read-Only Document Upload Zone -->
+                            <div class="file-drop-zone readonly-document">
+                              <div class="file-drop-zone-inner">
+                                <span
+                                  class="icon d-flex justify-content-center align-items-center"
+                                >
+                                  <img
+                                    src="../assets/images/file-upload-icon.svg"
+                                    class="img-fluid"
+                                    alt=""
+                                  />
+                                </span>
+                                <p>
+                                  Drag & drop Read-Only file or
+                                  <span class="browse-readonly-file"
+                                    >browse file</span
+                                  >
+                                </p>
+                                <p class="file-size">Max size: 20Mb</p>
+                                <input
+                                  type="file"
+                                  id="readonlyFileInput"
+                                  hidden
+                                  multiple
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Uploaded Read-Only Files Preview Section -->
+                            <div id="readonlyFileList"></div>
                           </div>
                         </div>
                       </form>
@@ -353,69 +386,177 @@
       </div>
     </section>
 
+    <!-- File Upload JS -->
+
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dateRangeSelector = document.getElementById("dateRangeSelector");
-        const datePickerContainer = document.getElementById(
-          "datePickerContainer"
-        );
-        const startDateInput = document.getElementById("startDate");
-        const endDateInput = document.getElementById("endDate");
-        const applyButton = document.getElementById("applyButton");
-        const daysCountSpan = document.getElementById("daysCount");
-        const dateRangeSpan = document.getElementById("dateRange");
+      const fileDropZone = document.querySelector(".file-drop-zone");
+      const fileInput = document.querySelector("#fileInput");
+      const fileList = document.getElementById("fileList");
 
-        // Toggle date picker visibility
-        dateRangeSelector.addEventListener("click", function () {
-          if (datePickerContainer.style.display === "block") {
-            datePickerContainer.style.display = "none";
-          } else {
-            datePickerContainer.style.display = "block";
-          }
-        });
-
-        // Function to calculate the difference in days
-        function calculateDays(start, end) {
-          const startDate = new Date(start);
-          const endDate = new Date(end);
-          const diffTime = Math.abs(endDate - startDate);
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // Including start date
-          return diffDays;
-        }
-
-        // Function to format the date to a readable format (e.g., May 19)
-        function formatDate(date) {
-          const options = { month: "short", day: "numeric" };
-          return new Date(date).toLocaleDateString("en-US", options);
-        }
-
-        // Apply the selected dates and update the display
-        applyButton.addEventListener("click", function () {
-          const startDate = startDateInput.value;
-          const endDate = endDateInput.value;
-
-          if (startDate && endDate) {
-            const daysCount = calculateDays(startDate, endDate);
-            daysCountSpan.textContent = `${daysCount} Days`;
-            dateRangeSpan.textContent = `${formatDate(
-              startDate
-            )} - ${formatDate(endDate)}`;
-            datePickerContainer.style.display = "none"; // Hide the picker after selection
-          }
-        });
+      // Handle drag and drop
+      fileDropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        fileDropZone.classList.add("dragover");
       });
+
+      fileDropZone.addEventListener("dragleave", () => {
+        fileDropZone.classList.remove("dragover");
+      });
+
+      fileDropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        fileDropZone.classList.remove("dragover");
+
+        const files = event.dataTransfer.files;
+        handleFiles(files);
+      });
+
+      document.querySelector(".browse-file").addEventListener("click", () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener("change", (event) => {
+        const files = event.target.files;
+        handleFiles(files);
+      });
+
+      function handleFiles(files) {
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2); // Convert bytes to MB and round to 2 decimal places
+
+          if (fileSizeInMB <= 20) {
+            // Create a new file preview element
+            const fileItem = document.createElement("div");
+            fileItem.classList.add("file-item");
+
+            const fileNameDisplay = document.createElement("span");
+            fileNameDisplay.classList.add("file-name");
+            fileNameDisplay.textContent = file.name;
+
+            const fileSizeDisplay = document.createElement("span");
+            fileSizeDisplay.classList.add("file-size-display");
+            fileSizeDisplay.textContent = `${fileSizeInMB} Mb`;
+
+            // Create delete icon using an image
+            const deleteIcon = document.createElement("span");
+            deleteIcon.classList.add("delete-icon");
+            const deleteImg = document.createElement("img");
+            deleteImg.src = "../assets/images/cross-icon.svg"; // Path to your delete icon image
+            deleteIcon.appendChild(deleteImg);
+
+            // Add click event to remove file
+            deleteIcon.addEventListener("click", () => {
+              fileItem.remove(); // Remove the file from the list when delete is clicked
+            });
+
+            fileItem.appendChild(fileNameDisplay);
+            fileItem.appendChild(fileSizeDisplay);
+            fileItem.appendChild(deleteIcon);
+
+            fileList.appendChild(fileItem); // Add the new file item to the file list
+          } else {
+            alert(`File size exceeds 20Mb limit: ${file.name}`);
+          }
+        }
+      }
     </script>
 
     <script>
-      const fileInput = document.getElementById("fileInput");
+      // Read-Only Document Logic
+      const readonlyFileDropZone = document.querySelector(
+        ".file-drop-zone.readonly-document"
+      );
+      const readonlyFileInput = document.querySelector("#readonlyFileInput");
+      const readonlyFileList = document.getElementById("readonlyFileList");
 
-      fileInput.addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (file) {
-          console.log("File selected:", file.name);
-          // You can now process the uploaded image file
-        }
+      // Handle drag and drop for Read-Only Document
+      readonlyFileDropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        readonlyFileDropZone.classList.add("dragover");
       });
+
+      readonlyFileDropZone.addEventListener("dragleave", () => {
+        readonlyFileDropZone.classList.remove("dragover");
+      });
+
+      readonlyFileDropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        readonlyFileDropZone.classList.remove("dragover");
+
+        const files = event.dataTransfer.files;
+        handleReadonlyFiles(files);
+      });
+
+      document
+        .querySelector(".browse-readonly-file")
+        .addEventListener("click", () => {
+          readonlyFileInput.click();
+        });
+
+      readonlyFileInput.addEventListener("change", (event) => {
+        const files = event.target.files;
+        handleReadonlyFiles(files);
+      });
+
+      function handleReadonlyFiles(files) {
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2);
+
+          if (fileSizeInMB <= 20) {
+            const fileItem = document.createElement("div");
+            fileItem.classList.add("file-item");
+
+            const fileNameDisplay = document.createElement("span");
+            fileNameDisplay.classList.add("file-name");
+            fileNameDisplay.textContent = file.name;
+
+            const fileSizeDisplay = document.createElement("span");
+            fileSizeDisplay.classList.add("file-size-display");
+            fileSizeDisplay.textContent = `${fileSizeInMB} Mb`;
+
+            // Create delete icon for Read-Only Document
+            const deleteIcon = document.createElement("span");
+            deleteIcon.classList.add("delete-icon");
+            const deleteImg = document.createElement("img");
+            deleteImg.src = "../assets/images/cross-icon.svg"; // Custom delete icon for Read-Only
+            deleteIcon.appendChild(deleteImg);
+
+            // Add click event to remove the file
+            deleteIcon.addEventListener("click", () => {
+              fileItem.remove();
+            });
+
+            fileItem.appendChild(fileNameDisplay);
+            fileItem.appendChild(fileSizeDisplay);
+            fileItem.appendChild(deleteIcon);
+
+            readonlyFileList.appendChild(fileItem);
+          } else {
+            alert(`File size exceeds 20Mb limit: ${file.name}`);
+          }
+        }
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document
+        .getElementById("publishButton")
+        .addEventListener("click", function () {
+          Swal.fire({
+            title: "Job Created!",
+            text: "Your job has been created successfully. You can now view the job on map.",
+            imageUrl: "../assets/images/job-published-icon.svg", // Replace with the path to your custom image
+            imageWidth: 100, // Adjust the width of the image
+            imageHeight: 100, // Adjust the height of the image
+            confirmButtonText: "OK",
+            customClass: {
+              container: "custom-alert-container",
+            },
+          });
+        });
     </script>
 
     <script src="../assets/script/myScript.js"></script>
@@ -434,5 +575,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
+    <!-- Flatpickr Month Select Plugin CSS -->
   </body>
 </html>

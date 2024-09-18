@@ -38,7 +38,7 @@
             <div class="col-12">
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="./dashboard.html">
                     <img
                       src="../assets/images/user-logo.svg"
                       class="img-fluid"
@@ -281,8 +281,8 @@
                         <div class="row gy-3">
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Qualification
-                            </label>
+                              >Qualification</label
+                            >
                             <input
                               type="text"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
@@ -299,75 +299,58 @@
                               placeholder="Institution Name"
                             />
                           </div>
-
-                          <div class="row gy-3">
-                            <label
-                              class="tw-pt-4 tw-pb-3 tw-text-lightBlue tw-font-medium"
-                              >Expiry Date</label
-                            >
-                            <br />
-                            <div class="col-12 col-lg-4">
-                              <div class="custom-date-container">
-                                <input
-                                  id="datePicker"
-                                  type="text"
-                                  class="custom-date-input w-100"
-                                  placeholder="Date"
+                          <label class="tw-text-lightBlue tw-font-medium"
+                            >Expiry Date</label
+                          >
+                          <br />
+                          <div class="col-12 col-lg-6">
+                            <div class="custom-date-container">
+                              <input
+                                id="datePicker"
+                                type="text"
+                                class="custom-date-input w-100"
+                                placeholder="Date"
+                              />
+                              <span class="date-arrow">
+                                <img
+                                  src="../assets/images/chevron-down.svg"
+                                  class="img-fluid"
+                                  alt=""
                                 />
-                                <span class="date-arrow">
-                                  <img
-                                    src="../assets/images/chevron-down.svg"
-                                    class="img-fluid"
-                                    alt=""
-                                  />
-                                </span>
-                              </div>
+                              </span>
                             </div>
-                            <div class="col-12 col-lg-4">
-                              <div class="custom-month-container">
-                                <input
-                                  id="monthPicker"
-                                  type="text"
-                                  class="custom-month-input w-100"
-                                  placeholder="Month"
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="custom-month-container">
+                              <input
+                                id="monthPicker"
+                                type="text"
+                                class="custom-month-input w-100"
+                                placeholder="Month"
+                              />
+                              <span class="month-arrow">
+                                <img
+                                  src="../assets/images/chevron-down.svg"
+                                  class="img-fluid"
+                                  alt=""
                                 />
-                                <span class="month-arrow">
-                                  <img
-                                    src="../assets/images/chevron-down.svg"
-                                    class="img-fluid"
-                                    alt=""
-                                  />
-                                </span>
-                              </div>
-                            </div>
-                            <div class="col-12 col-lg-4">
-                              <div class="custom-year-container">
-                                <input
-                                  id="yearPicker"
-                                  type="text"
-                                  class="custom-year-input w-100"
-                                  placeholder="Year"
-                                />
-                                <span class="year-arrow">
-                                  <img
-                                    src="../assets/images/chevron-down.svg"
-                                    class="img-fluid"
-                                    alt=""
-                                  />
-                                </span>
-                              </div>
+                              </span>
                             </div>
                           </div>
                         </div>
                       </form>
-                      <div class="row">
-                        <div class="col-12">
-                          <button
-                            class="btn w-100 tw-my-8 tw-bg-green-50 tw-font-bold tw-text-darkGreen tw-border-dashed tw-border-staffBtnBorder tw-border-2"
-                          >
-                            Add More Qualifications
-                          </button>
-                        </div>
+
+                      <!-- Container for dynamically added qualifications -->
+                      <div id="qualificationsContainer"></div>
+
+                      <!-- Button to add more qualifications -->
+                      <div class="col-12">
+                        <button
+                          id="addQualificationBtn"
+                          class="btn w-100 tw-my-10 tw-bg-green-50 tw-font-bold tw-text-darkGreen tw-border-dashed tw-border-staffBtnBorder tw-border-2"
+                        >
+                          Add More Qualifications
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -389,6 +372,73 @@
         </div>
       </div>
     </section>
+
+    <script>
+      document
+        .getElementById("addQualificationBtn")
+        .addEventListener("click", function () {
+          // Define the additional qualification section to be added dynamically
+          var newQualificationHTML = `
+          <div class="row gy-3 my-3">
+            <div class="col-12 col-lg-6">
+              <label class="pb-2 tw-text-lightBlue tw-font-medium">Qualification</label>
+              <input
+                type="text"
+                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                placeholder="e.g diploma"
+              />
+            </div>
+            <div class="col-12 col-lg-6">
+              <label class="pb-2 tw-text-lightBlue tw-font-medium">Institution Name</label>
+              <input
+                type="text"
+                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                placeholder="Institution Name"
+              />
+            </div>
+            <label class="tw-text-lightBlue tw-font-medium">Expiry Date</label>
+            <br />
+            <div class="col-12 col-lg-6">
+              <div class="custom-date-container">
+                <input
+                  type="text"
+                  class="custom-date-input w-100"
+                  placeholder="Date"
+                />
+                <span class="date-arrow">
+                  <img
+                    src="../assets/images/chevron-down.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="custom-month-container">
+                <input
+                  type="text"
+                  class="custom-month-input w-100"
+                  placeholder="Month"
+                />
+                <span class="month-arrow">
+                  <img
+                    src="../assets/images/chevron-down.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
+
+          // Append the new qualification section to the container
+          document
+            .getElementById("qualificationsContainer")
+            .insertAdjacentHTML("beforeend", newQualificationHTML);
+        });
+    </script>
 
     <!-- Flatpickr Month Select Plugin JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>

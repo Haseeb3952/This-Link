@@ -500,6 +500,182 @@
   width: 100%;
   border: 2px solid #ccc;
 }
+
+.file-drop-zone {
+  border: 2px dashed #ced4da;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f9fafc;
+  transition: background-color 0.3s ease;
+}
+
+.file-drop-zone-inner {
+  color: #6c757d;
+}
+
+.icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.browse-file {
+  color: #3b7471;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.file-size {
+  font-size: 12px;
+  color: #adb5bd;
+}
+
+.file-drop-zone.dragover {
+  background-color: #f1f3f5;
+}
+
+.file-item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.file-size-display {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #e6ede5;
+}
+
+.delete-icon img {
+  width: 10px; /* Adjust width */
+  height: 10px; /* Adjust height */
+  cursor: pointer;
+}
+
+/* Styling for Read-Only Document */
+.file-drop-zone.readonly-document {
+  border: 2px dashed #28a745;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  background-color: #f9fafc;
+  margin-bottom: 20px;
+}
+
+.browse-readonly-file {
+  color: #3b7471;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Uploaded Read-Only Files Preview Section */
+#readonlyFileList .file-item {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+#readonlyFileList .file-name {
+  font-weight: bold;
+}
+
+#readonlyFileList .file-size-display {
+  color: #6c757d;
+  font-size: 12px;
+}
+
+#readonlyFileList .delete-icon {
+  cursor: pointer;
+}
+
+#readonlyFileList .delete-icon img {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+div:where(.swal2-container).swal2-center > .swal2-popup {
+  grid-column: 2;
+  grid-row: 2;
+  place-self: center center;
+  width: 450px;
+  border-radius: 20px;
+}
+
+div:where(.swal2-container) h2:where(.swal2-title) {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 !important;
+  color: inherit;
+  font-size: 1.875em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  word-wrap: break-word;
+}
+
+div:where(.swal2-container) div:where(.swal2-actions) {
+  display: flex;
+  z-index: 1;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 0 !important;
+  padding: 0;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #3b7471 !important;
+  color: #fff;
+  font-size: 1em;
+}
+
+div:where(.swal2-container) .swal2-html-container {
+  z-index: 1;
+  justify-content: center;
+  margin: 0;
+  padding: 1em 1em 0.3em !important;
+  overflow: auto;
+  color: #7d7d7d !important;
+  font-size: 1em !important;
+  font-weight: normal;
+  line-height: 1.4rem !important;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.time-text {
+  font-size: 9px;
+}
+
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .mobile-hidden {

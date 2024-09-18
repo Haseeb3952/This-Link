@@ -13,6 +13,18 @@
       crossorigin="anonymous"
     />
 
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- Flatpickr Month Select Plugin CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css"
+    />
+
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
@@ -174,7 +186,7 @@
             <div class="row my-2">
               <div class="col-12 col-lg-6">
                 <div class="tw-py-3">
-                  <h2 class="tw-font-bold">Add New Staff</h2>
+                  <h2 class="tw-font-bold">Add New Job</h2>
                 </div>
               </div>
               <div class="col-12 col-lg-6">
@@ -189,7 +201,7 @@
                     </button>
                   </div>
                   <div>
-                    <a href="./professional-details.html">
+                    <a href="./job-application-form.html">
                       <button
                         class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
                       >
@@ -201,37 +213,25 @@
               </div>
             </div>
 
-            <div class="tw-border tw-rounded-lg tw-shadow">
+            <div class="tw-border tw-rounded-lg tw-shadow tw-mb-4">
               <div class="row tw-p-3 gy-3">
                 <div class="col-auto">
                   <div>
-                    <button
-                      class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-gray-100 d-flex align-items-center gap-3"
-                    >
-                      <div
-                        class="tw-size-5 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
-                      >
-                        1
-                      </div>
-                      <div class="tw-text-green-700 tw-font-medium">
-                        Personal Information
-                      </div>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <div>
-                    <a href="./professional-details.html">
+                    <a href="./job-creation.html">
                       <button
-                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                        class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
                       >
                         <div
-                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                          class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
                         >
-                          2
+                          <img
+                            src="../assets/images/check-icon.svg"
+                            class="img-fluid"
+                            alt=""
+                          />
                         </div>
-                        <div class="tw-text-gray-400 tw-font-medium">
-                          Professional Details
+                        <div class="tw-text-white tw-font-medium">
+                          Job Details
                         </div>
                       </button>
                     </a>
@@ -240,17 +240,35 @@
                 <div class="col-auto">
                   <div>
                     <button
-                      class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                      class="btn tw-border-gray-300 tw-border-2 tw-bg-green-50 d-flex align-items-center gap-3"
                     >
                       <div
-                        class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                        class="tw-size-5 tw-bg-btnBgDarkGreen tw-font-bold tw-rounded-full tw-shadow-sm text-white tw-text-xs d-flex justify-content-center align-items-center"
                       >
-                        3
+                        2
                       </div>
-                      <div class="tw-text-gray-400 tw-font-medium">
-                        Application Form
+                      <div class="tw-text-green-700 tw-font-medium">
+                        Required Resources
                       </div>
                     </button>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div>
+                    <a href="./job-application-form.html">
+                      <button
+                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                      >
+                        <div
+                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                        >
+                          3
+                        </div>
+                        <div class="tw-text-gray-400 tw-font-medium">
+                          Application Form
+                        </div>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -258,80 +276,20 @@
               <div class="tw-p-2">
                 <div class="row">
                   <div class="col-12">
-                    <div class="sm:tw-px-12 lg:tw-px-20">
-                      <h4 class="tw-py-5 tw-font-semibold">
-                        Add Personal Information
-                      </h4>
-                      <div
-                        class="d-flex justify-content-center align-items-center"
-                      >
-                        <div class="profile-picture">
-                          <img
-                            src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1726483104~exp=1726486704~hmac=4c90db7b15a2e4dd6b919acf48c3150ae5b33c23f36fca2ad3cccd6042d43f52&w=740"
-                            class="img-fluid tw-size-32 tw-rounded-3xl"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                      <div class="text-center tw-my-2">
-                        <input
-                          type="file"
-                          id="fileInput"
-                          class="file-input"
-                          accept="image/*"
-                        />
-
-                        <button
-                          class="file-upload-btn"
-                          onclick="document.getElementById('fileInput').click()"
+                    <div class="sm:tw-px-12 lg:tw-px-20 tw-pb-32">
+                      <h4 class="tw-py-5 tw-font-semibold">Add Resources</h4>
+                      <div class="form-floating">
+                        <textarea
+                          class="form-control bootstrap-input-reset-style tw-rounded-lg"
+                          placeholder="Leave a comment here"
+                          id="floatingTextarea"
+                          style="height: 150px; background-color: #f5f7fb"
+                        ></textarea>
+                        <label for="floatingTextarea"
+                          >Add a required resources like Staff,
+                          Equipment...</label
                         >
-                          Upload a Picture
-                        </button>
                       </div>
-                      <form class="tw-my-10">
-                        <div class="row gy-3">
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Name</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Name"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Surname</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Surname"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Phone Number</label
-                            >
-                            <input
-                              type="number"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Staff Phone Number"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Email</label
-                            >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="name@email.com"
-                            />
-                          </div>
-                        </div>
-                      </form>
                     </div>
                   </div>
                 </div>
@@ -354,67 +312,122 @@
     </section>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const dateRangeSelector = document.getElementById("dateRangeSelector");
-        const datePickerContainer = document.getElementById(
-          "datePickerContainer"
-        );
-        const startDateInput = document.getElementById("startDate");
-        const endDateInput = document.getElementById("endDate");
-        const applyButton = document.getElementById("applyButton");
-        const daysCountSpan = document.getElementById("daysCount");
-        const dateRangeSpan = document.getElementById("dateRange");
+      document
+        .getElementById("addQualificationBtn")
+        .addEventListener("click", function () {
+          // Define the additional qualification section to be added dynamically
+          var newQualificationHTML = `
+          <div class="row gy-3 my-3">
+            <div class="col-12 col-lg-6">
+              <label class="pb-2 tw-text-lightBlue tw-font-medium">Qualification</label>
+              <input
+                type="text"
+                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                placeholder="e.g diploma"
+              />
+            </div>
+            <div class="col-12 col-lg-6">
+              <label class="pb-2 tw-text-lightBlue tw-font-medium">Institution Name</label>
+              <input
+                type="text"
+                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                placeholder="Institution Name"
+              />
+            </div>
+            <label class="tw-text-lightBlue tw-font-medium">Expiry Date</label>
+            <br />
+            <div class="col-12 col-lg-6">
+              <div class="custom-date-container">
+                <input
+                  type="text"
+                  class="custom-date-input w-100"
+                  placeholder="Date"
+                />
+                <span class="date-arrow">
+                  <img
+                    src="../assets/images/chevron-down.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="custom-month-container">
+                <input
+                  type="text"
+                  class="custom-month-input w-100"
+                  placeholder="Month"
+                />
+                <span class="month-arrow">
+                  <img
+                    src="../assets/images/chevron-down.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
 
-        // Toggle date picker visibility
-        dateRangeSelector.addEventListener("click", function () {
-          if (datePickerContainer.style.display === "block") {
-            datePickerContainer.style.display = "none";
-          } else {
-            datePickerContainer.style.display = "block";
-          }
+          // Append the new qualification section to the container
+          document
+            .getElementById("qualificationsContainer")
+            .insertAdjacentHTML("beforeend", newQualificationHTML);
         });
+    </script>
 
-        // Function to calculate the difference in days
-        function calculateDays(start, end) {
-          const startDate = new Date(start);
-          const endDate = new Date(end);
-          const diffTime = Math.abs(endDate - startDate);
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // Including start date
-          return diffDays;
-        }
+    <!-- Flatpickr Month Select Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
 
-        // Function to format the date to a readable format (e.g., May 19)
-        function formatDate(date) {
-          const options = { month: "short", day: "numeric" };
-          return new Date(date).toLocaleDateString("en-US", options);
-        }
+    <script>
+      // Initialize Flatpickr for the date picker
+      flatpickr("#datePicker", {
+        dateFormat: "d", // Only display the day
+        defaultDate: new Date(), // Set default to today's date
+      });
 
-        // Apply the selected dates and update the display
-        applyButton.addEventListener("click", function () {
-          const startDate = startDateInput.value;
-          const endDate = endDateInput.value;
-
-          if (startDate && endDate) {
-            const daysCount = calculateDays(startDate, endDate);
-            daysCountSpan.textContent = `${daysCount} Days`;
-            dateRangeSpan.textContent = `${formatDate(
-              startDate
-            )} - ${formatDate(endDate)}`;
-            datePickerContainer.style.display = "none"; // Hide the picker after selection
-          }
-        });
+      // Initialize Flatpickr for the month picker
+      flatpickr("#monthPicker", {
+        dateFormat: "F Y", // Format to show full month name and year
+        plugins: [
+          new monthSelectPlugin({
+            shorthand: true, // Display shorthand version of month names
+            dateFormat: "F Y", // Format of the month and year displayed
+            altInput: true, // Show an alternative input with formatted text
+            altFormat: "F Y", // Format for the alternative input
+          }),
+        ],
       });
     </script>
 
-    <script>
-      const fileInput = document.getElementById("fileInput");
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-      fileInput.addEventListener("change", function (event) {
-        const file = event.target.files[0];
-        if (file) {
-          console.log("File selected:", file.name);
-          // You can now process the uploaded image file
-        }
+    <script>
+      // Initialize Flatpickr with custom options
+      flatpickr("#datePicker", {
+        dateFormat: "d", // Only display the day
+        defaultDate: new Date(), // Set default to today's date
+      });
+    </script>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Flatpickr Month Select Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+
+    <script>
+      // Initialize Flatpickr for the month picker with only month selection
+      flatpickr("#monthPicker", {
+        plugins: [
+          new monthSelectPlugin({
+            shorthand: false, // Show full month names (e.g., "January")
+            dateFormat: "F Y", // Format to show full month name and year
+            altFormat: "F Y", // Alternate format for display (e.g., "January 2024")
+          }),
+        ],
       });
     </script>
 
@@ -434,5 +447,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
+    <!-- Flatpickr Month Select Plugin CSS -->
   </body>
 </html>

@@ -140,3 +140,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Get the current date
+const today = new Date().toISOString().split("T")[0];
+
+// Set the value of the input to the current date
+document.getElementById("date-input").value = today;

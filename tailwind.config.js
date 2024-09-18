@@ -4,8 +4,14 @@ module.exports = {
   content: [
     "./index.html",
     "./pages/dashboard.html",
+    "./pages/contractors.html",
+    "./pages/equipments.html",
+    "./pages/staff.html",
     "./pages/staff-creation.html",
-    "./pages/professional-details",
+    "./pages/job-creation.html",
+    "./pages/required-resources.html",
+    "./pages/job-application-form.html",
+    "./pages/professional-details.html",
   ],
   theme: {
     extend: {
