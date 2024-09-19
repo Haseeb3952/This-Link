@@ -256,6 +256,10 @@
 
 /* Dashboard Page CSS */
 
+.bgDashboard {
+  background-color: #fafafb;
+}
+
 .btn-reset-style:focus {
   outline: none;
   box-shadow: none !important;
@@ -294,6 +298,7 @@
 .date-range-selector {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
   background-color: #fafafb;
   border-radius: 8px;
@@ -314,10 +319,12 @@
 
 .date-range-text .days {
   font-weight: bold;
+  font-size: 9px;
 }
 
 .date-range-text .dates {
   color: #555;
+  font-size: 9px;
 }
 
 .dropdown-icon {

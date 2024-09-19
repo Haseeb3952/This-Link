@@ -9,10 +9,12 @@ module.exports = {
     "./pages/equipments-creation.html",
     "./pages/staff.html",
     "./pages/staff-creation.html",
+    "./pages/contractor-creation.html",
     "./pages/job-creation.html",
     "./pages/required-resources.html",
     "./pages/job-application-form.html",
     "./pages/professional-details.html",
+    "./pages/contractor-details.html",
   ],
   theme: {
     extend: {

@@ -13,10 +13,22 @@
       crossorigin="anonymous"
     />
 
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- Flatpickr Month Select Plugin CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css"
+    />
+
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <title>This Link - Equipment Creation</title>
+    <title>This Link - Staff Creation</title>
   </head>
   <body>
     <section>
@@ -189,53 +201,35 @@
                     </button>
                   </div>
                   <div>
-                    <a href="./professional-details.html">
-                      <button
-                        class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
-                      >
-                        Next
-                      </button>
-                    </a>
+                    <button
+                      class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
+                    >
+                      Next
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="tw-border tw-rounded-lg tw-shadow">
+            <div class="tw-border tw-rounded-lg tw-shadow tw-mb-4">
               <div class="row tw-p-3 gy-3">
                 <div class="col-auto">
-                  <a href="./equipments-creation.html">
-                    <button
-                      class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
-                    >
-                      <div
-                        class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
-                      >
-                        <img
-                          src="../assets/images/check-icon.svg"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                      <div class="tw-text-white tw-font-medium">
-                        Equipemnt Information
-                      </div>
-                    </button>
-                  </a>
-                </div>
-                <div class="col-auto">
                   <div>
-                    <a href="./upload-equipment-docs.html">
+                    <a href="./staff-creation.html">
                       <button
-                        class="btn tw-border-gray-300 tw-border-2 tw-bg-green-50 d-flex align-items-center gap-3"
+                        class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
                       >
                         <div
-                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                          class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
                         >
-                          2
+                          <img
+                            src="../assets/images/check-icon.svg"
+                            class="img-fluid"
+                            alt=""
+                          />
                         </div>
-                        <div class="tw-text-gray-400 tw-font-medium">
-                          Upload Documents
+                        <div class="tw-text-white tw-font-medium">
+                          Personal Information
                         </div>
                       </button>
                     </a>
@@ -243,20 +237,34 @@
                 </div>
                 <div class="col-auto">
                   <div>
-                    <a href="./equipment-usage.html">
-                      <button
-                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                    <button
+                      class="btn tw-border-gray-300 tw-border-2 tw-bg-green-50 d-flex align-items-center gap-3"
+                    >
+                      <div
+                        class="tw-size-5 tw-bg-btnBgDarkGreen tw-font-bold tw-rounded-full tw-shadow-sm text-white tw-text-xs d-flex justify-content-center align-items-center"
                       >
-                        <div
-                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
-                        >
-                          3
-                        </div>
-                        <div class="tw-text-gray-400 tw-font-medium">
-                          Usage Details
-                        </div>
-                      </button>
-                    </a>
+                        2
+                      </div>
+                      <div class="tw-text-green-700 tw-font-medium">
+                        Professional Details
+                      </div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div>
+                    <button
+                      class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                    >
+                      <div
+                        class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                      >
+                        3
+                      </div>
+                      <div class="tw-text-gray-400 tw-font-medium">
+                        Application Form
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -264,72 +272,86 @@
               <div class="tw-p-2">
                 <div class="row">
                   <div class="col-12">
-                    <div class="sm:tw-px-12 lg:tw-px-20">
-                      <form class="tw-my-10">
+                    <div class="sm:tw-px-12 lg:tw-px-20 tw-pb-32">
+                      <h4 class="tw-py-5 tw-font-semibold">
+                        Add Professional Details
+                      </h4>
+
+                      <form class="tw-my-1">
                         <div class="row gy-3">
                           <div class="col-12 col-lg-6">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Type</label
+                              >Qualification</label
                             >
                             <input
                               type="text"
                               class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Certification Type"
+                              placeholder="e.g diploma"
                             />
                           </div>
-                          <!-- Examination Certificate Upload Zone -->
-                          <div class="file-drop-zone exam-certificate">
-                            <div class="file-drop-zone-inner">
-                              <span
-                                class="icon d-flex justify-content-center align-items-center"
-                              >
+                          <div class="col-12 col-lg-6">
+                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
+                              >Institution Name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                              placeholder="Institution Name"
+                            />
+                          </div>
+                          <label class="tw-text-lightBlue tw-font-medium"
+                            >Expiry Date</label
+                          >
+                          <br />
+                          <div class="col-12 col-lg-6">
+                            <div class="custom-date-container">
+                              <input
+                                id="datePicker"
+                                type="text"
+                                class="custom-date-input w-100"
+                                placeholder="Date"
+                              />
+                              <span class="date-arrow">
                                 <img
-                                  src="../assets/images/file-upload-icon.svg"
+                                  src="../assets/images/chevron-down.svg"
                                   class="img-fluid"
                                   alt=""
                                 />
                               </span>
-                              <p>
-                                Drag & drop Examination Certificate file or
-                                <span class="browse-exam-certificate"
-                                  >browse file</span
-                                >
-                              </p>
-                              <p class="file-size">Max size: 20Mb</p>
-                              <input
-                                type="file"
-                                id="examCertificateFileInput"
-                                hidden
-                                multiple
-                              />
                             </div>
                           </div>
-                          <!-- Uploaded Examination Certificate Files Preview Section -->
-                          <div id="examCertificateFileList" class="m-0"></div>
                           <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Effective Date</label
-                            >
-                            <input
-                              type="date"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="02:00 AM - 04:00 PM"
-                              id="date-input"
-                            />
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Expirey Date</label
-                            >
-                            <input
-                              type="date"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="02:00 AM - 04:00 PM"
-                              id="expirey-date-input"
-                            />
+                            <div class="custom-month-container">
+                              <input
+                                id="monthPicker"
+                                type="text"
+                                class="custom-month-input w-100"
+                                placeholder="Month"
+                              />
+                              <span class="month-arrow">
+                                <img
+                                  src="../assets/images/chevron-down.svg"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </form>
+
+                      <!-- Container for dynamically added qualifications -->
+                      <div id="qualificationsContainer"></div>
+
+                      <!-- Button to add more qualifications -->
+                      <div class="col-12">
+                        <button
+                          id="addQualificationBtn"
+                          class="btn w-100 tw-my-10 tw-bg-green-50 tw-font-bold tw-text-darkGreen tw-border-dashed tw-border-staffBtnBorder tw-border-2"
+                        >
+                          Add More Qualifications
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -352,101 +374,125 @@
     </section>
 
     <script>
-      // Examination Certificate Logic
-      const examCertificateDropZone = document.querySelector(
-        ".file-drop-zone.exam-certificate"
-      );
-      const examCertificateFileInput = document.querySelector(
-        "#examCertificateFileInput"
-      );
-      const examCertificateFileList = document.getElementById(
-        "examCertificateFileList"
-      );
-
-      // Handle drag and drop for Examination Certificate
-      examCertificateDropZone.addEventListener("dragover", (event) => {
-        event.preventDefault();
-        examCertificateDropZone.classList.add("dragover");
-      });
-
-      examCertificateDropZone.addEventListener("dragleave", () => {
-        examCertificateDropZone.classList.remove("dragover");
-      });
-
-      examCertificateDropZone.addEventListener("drop", (event) => {
-        event.preventDefault();
-        examCertificateDropZone.classList.remove("dragover");
-
-        const files = event.dataTransfer.files;
-        handleExamCertificateFiles(files);
-      });
-
       document
-        .querySelector(".browse-exam-certificate")
-        .addEventListener("click", () => {
-          examCertificateFileInput.click();
-        });
+        .getElementById("addQualificationBtn")
+        .addEventListener("click", function () {
+          // Define the additional qualification section to be added dynamically
+          var newQualificationHTML = `
+          <div class="row gy-3 my-3">
+            <div class="col-12 col-lg-6">
+              <label class="pb-2 tw-text-lightBlue tw-font-medium">Qualification</label>
+              <input
+                type="text"
+                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                placeholder="e.g diploma"
+              />
+            </div>
+            <div class="col-12 col-lg-6">
+              <label class="pb-2 tw-text-lightBlue tw-font-medium">Institution Name</label>
+              <input
+                type="text"
+                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
+                placeholder="Institution Name"
+              />
+            </div>
+            <label class="tw-text-lightBlue tw-font-medium">Expiry Date</label>
+            <br />
+            <div class="col-12 col-lg-6">
+              <div class="custom-date-container">
+                <input
+                  type="text"
+                  class="custom-date-input w-100"
+                  placeholder="Date"
+                />
+                <span class="date-arrow">
+                  <img
+                    src="../assets/images/chevron-down.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="custom-month-container">
+                <input
+                  type="text"
+                  class="custom-month-input w-100"
+                  placeholder="Month"
+                />
+                <span class="month-arrow">
+                  <img
+                    src="../assets/images/chevron-down.svg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        `;
 
-      examCertificateFileInput.addEventListener("change", (event) => {
-        const files = event.target.files;
-        handleExamCertificateFiles(files);
+          // Append the new qualification section to the container
+          document
+            .getElementById("qualificationsContainer")
+            .insertAdjacentHTML("beforeend", newQualificationHTML);
+        });
+    </script>
+
+    <!-- Flatpickr Month Select Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+
+    <script>
+      // Initialize Flatpickr for the date picker
+      flatpickr("#datePicker", {
+        dateFormat: "d", // Only display the day
+        defaultDate: new Date(), // Set default to today's date
       });
 
-      function handleExamCertificateFiles(files) {
-        for (let i = 0; i < files.length; i++) {
-          const file = files[i];
-          const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2);
-
-          if (fileSizeInMB <= 20) {
-            const fileItem = document.createElement("div");
-            fileItem.classList.add("file-item");
-
-            const fileNameDisplay = document.createElement("span");
-            fileNameDisplay.classList.add("file-name");
-            fileNameDisplay.textContent = file.name;
-
-            const fileSizeDisplay = document.createElement("span");
-            fileSizeDisplay.classList.add("file-size-display");
-            fileSizeDisplay.textContent = `${fileSizeInMB} Mb`;
-
-            // Create delete icon for Examination Certificate
-            const deleteIcon = document.createElement("span");
-            deleteIcon.classList.add("delete-icon");
-            const deleteImg = document.createElement("img");
-            deleteImg.src = "../assets/images/cross-icon.svg"; // Custom delete icon
-            deleteIcon.appendChild(deleteImg);
-
-            // Add click event to remove the file
-            deleteIcon.addEventListener("click", () => {
-              fileItem.remove();
-            });
-
-            fileItem.appendChild(fileNameDisplay);
-            fileItem.appendChild(fileSizeDisplay);
-            fileItem.appendChild(deleteIcon);
-
-            examCertificateFileList.appendChild(fileItem);
-          } else {
-            alert(`File size exceeds 20Mb limit: ${file.name}`);
-          }
-        }
-      }
+      // Initialize Flatpickr for the month picker
+      flatpickr("#monthPicker", {
+        dateFormat: "F Y", // Format to show full month name and year
+        plugins: [
+          new monthSelectPlugin({
+            shorthand: true, // Display shorthand version of month names
+            dateFormat: "F Y", // Format of the month and year displayed
+            altInput: true, // Show an alternative input with formatted text
+            altFormat: "F Y", // Format for the alternative input
+          }),
+        ],
+      });
     </script>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
-      // Get the current date
-      const today = new Date().toISOString().split("T")[0];
-
-      // Set the value of the input to the current date
-      document.getElementById("date-input").value = today;
+      // Initialize Flatpickr with custom options
+      flatpickr("#datePicker", {
+        dateFormat: "d", // Only display the day
+        defaultDate: new Date(), // Set default to today's date
+      });
     </script>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Flatpickr Month Select Plugin JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+
     <script>
-      // Get the current date
-      const expirey_date = new Date().toISOString().split("T")[0];
-
-      // Set the value of the input to the current date
-      document.getElementById("expirey-date-input").value = expirey_date;
+      // Initialize Flatpickr for the month picker with only month selection
+      flatpickr("#monthPicker", {
+        plugins: [
+          new monthSelectPlugin({
+            shorthand: false, // Show full month names (e.g., "January")
+            dateFormat: "F Y", // Format to show full month name and year
+            altFormat: "F Y", // Alternate format for display (e.g., "January 2024")
+          }),
+        ],
+      });
     </script>
+
     <script src="../assets/script/myScript.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -463,5 +509,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
+    <!-- Flatpickr Month Select Plugin CSS -->
   </body>
 </html>

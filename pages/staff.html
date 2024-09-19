@@ -19,12 +19,12 @@
     <title>This Link - Staff</title>
   </head>
   <body>
-    <section>
+    <section class="bgDashboard">
       <div class="container-fluid">
         <div class="row gy-3 gy-3">
           <div class="col-12 col-lg-9">
             <div class="col-12">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="./dashboard.html">
                     <img
@@ -170,51 +170,60 @@
                 </div>
               </nav>
             </div>
-
-            <div class="container">
-              <div class="row tw-border tw-rounded-lg my-3 align-items-center">
-                <div class="col-12 col-lg-6">
-                  <div class="d-flex align-items-center gap-3">
-                    <div class="py-3">
-                      <a
-                        href="./dashboard.html"
-                        class="tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
-                      >
-                        Jobs
-                      </a>
+            <div class="container-fluid">
+              <div
+                class="row tw-border tw-rounded-lg my-3 bg-white align-items-center gy-2 pb-2"
+              >
+                <div class="col-12 col-lg-7">
+                  <div class="row gy-1">
+                    <div class="col-lg-3 col-auto">
+                      <div class="py-3">
+                        <a
+                          href="./dashboard.html"
+                          class="tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
+                        >
+                          Jobs
+                        </a>
+                      </div>
                     </div>
-                    <div class="py-3">
-                      <a
-                        href="./staff.html"
-                        class="tw-bg-yellow-300 tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
-                      >
-                        Staffs
-                      </a>
+                    <div class="col-lg-3 col-auto">
+                      <div class="py-3">
+                        <a
+                          href="./staff.html"
+                          class="tw-bg-yellow-300 tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
+                        >
+                          Staffs
+                        </a>
+                      </div>
                     </div>
-                    <div class="py-3">
-                      <a
-                        href="./equipments.html"
-                        class="tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
-                      >
-                        Equipemnts
-                      </a>
+                    <div class="col-lg-3 col-auto">
+                      <div class="py-3">
+                        <a
+                          href="./equipments.html"
+                          class="tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
+                        >
+                          Equipments
+                        </a>
+                      </div>
                     </div>
-                    <div class="py-3">
-                      <a
-                        href="./contractors.html"
-                        class="tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
-                      >
-                        Contractors
-                      </a>
+                    <div class="col-lg-3 col-auto">
+                      <div class="py-3">
+                        <a
+                          href="./contractors.html"
+                          class="tw-font-semibold tw-px-4 tw-py-3 tw-rounded-lg text-dark"
+                        >
+                          Contractors
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                  <div class="">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div>
+                <div class="col-12 col-lg-5">
+                  <div class="row align-items-center gy-3">
+                    <div class="col-12 col-lg-7">
+                      <div
+                        class="d-flex justify-content-lg-end justify-content-start"
+                      >
                         <div
                           class="date-range-selector border-1"
                           id="dateRangeSelector"
@@ -227,7 +236,7 @@
                             />
                           </div>
                           <div class="date-range-text" id="dateRangeText">
-                            <div class="d-flex gap-2">
+                            <div class="d-flex gap-2 justify-content-between">
                               <div>
                                 <span class="days" id="daysCount">07 Days</span>
                               </div>
@@ -238,9 +247,9 @@
                               </div>
                             </div>
                           </div>
-                          <div class="dropdown-icon ps-3">
+                          <div class="dropdown-icon">
                             <img
-                              src="../assets/images/date-select-arrow gy-3-icon.svg"
+                              src="../assets/images/date-select-arrow-icon.svg"
                               class="img-fluid"
                               alt=""
                             />
@@ -258,10 +267,14 @@
                           </button>
                         </div>
                       </div>
-                      <div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <div
+                        class="d-flex justify-content-lg-end justify-content-start"
+                      >
                         <a href="./staff-creation.html">
                           <button
-                            class="tw-bg-btnAddJob d-flex gap-2 align-items-center tw-text-white tw-px-4 tw-py-2 tw-rounded-lg"
+                            class="tw-bg-btnAddJob d-flex gap-2 mb-lg-0 mb-2 align-items-center tw-text-white tw-px-4 tw-py-2 tw-rounded-lg"
                           >
                             <div>
                               <img
@@ -294,8 +307,10 @@
 
           <div class="container">
             <div class="row">
-              <div class="col-lg-9 col-auto">
-                <table class="table border-1 mx-2 table-responsive">
+              <div class="col-lg-9">
+                <table
+                  class="table tw-border mx-2 table-responsive bg-white tw-rounded-lg"
+                >
                   <thead>
                     <tr>
                       <th scope="col">#</th>
@@ -610,6 +625,145 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+              <div class="col-12 col-lg-3">
+                <div class="h-100 bg-white tw-rounded-lg tw-shadow p-2">
+                  <div style="overflow-x: auto; white-space: nowrap">
+                    <ul
+                      class="nav nav-pills mb-3 bg-warning p-2 tw-rounded-lg"
+                      id="pills-tab"
+                      role="tablist"
+                    >
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="pills-available-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-available"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-available"
+                          aria-selected="true"
+                        >
+                          Available
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="pills-notavailable-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-notavailable"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-notavailable"
+                          aria-selected="false"
+                        >
+                          Not Available
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="pills-holiday-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-holiday"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-holiday"
+                          aria-selected="false"
+                        >
+                          Holiday
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="pills-unpaidleave-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-unpaidleave"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-unpaidleave"
+                          aria-selected="false"
+                        >
+                          Unpaid Leave
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="pills-offsick-tab"
+                          data-bs-toggle="pill"
+                          data-bs-target="#pills-offsick"
+                          type="button"
+                          role="tab"
+                          aria-controls="pills-offsick"
+                          aria-selected="false"
+                        >
+                          Off Sick
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-available"
+                      role="tabpanel"
+                      aria-labelledby="pills-available-tab"
+                    >
+                      <p>
+                        This is the <strong>Available</strong> tab content. You
+                        are currently available.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-notavailable"
+                      role="tabpanel"
+                      aria-labelledby="pills-notavailable-tab"
+                    >
+                      <p>
+                        This is the <strong>Not Available</strong> tab content.
+                        You are not available at the moment.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-holiday"
+                      role="tabpanel"
+                      aria-labelledby="pills-holiday-tab"
+                    >
+                      <p>
+                        This is the <strong>Holiday</strong> tab content. You
+                        are currently on a holiday.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-unpaidleave"
+                      role="tabpanel"
+                      aria-labelledby="pills-unpaidleave-tab"
+                    >
+                      <p>
+                        This is the <strong>Unpaid Leave</strong> tab content.
+                        You are on unpaid leave.
+                      </p>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-offsick"
+                      role="tabpanel"
+                      aria-labelledby="pills-offsick-tab"
+                    >
+                      <p>
+                        This is the <strong>Off Sick</strong> tab content. You
+                        are off sick right now.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
