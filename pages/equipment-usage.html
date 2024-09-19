@@ -189,11 +189,12 @@
                     </button>
                   </div>
                   <div>
-                    <a href="./professional-details.html">
+                    <a>
                       <button
-                        class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
+                        id="publishButton"
+                        class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen tw-font-medium"
                       >
-                        Next
+                        Publish
                       </button>
                     </a>
                   </div>
@@ -423,6 +424,25 @@
           }
         }
       }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document
+        .getElementById("publishButton")
+        .addEventListener("click", function () {
+          Swal.fire({
+            title: "Equipment Created!",
+            text: "Your equipment has been successfully created. You can now view it on the Equipment page.",
+            imageUrl: "../assets/images/job-published-icon.svg", // Replace with the path to your custom image
+            imageWidth: 100, // Adjust the width of the image
+            imageHeight: 100, // Adjust the height of the image
+            confirmButtonText: "OK",
+            customClass: {
+              container: "custom-alert-container",
+            },
+          });
+        });
     </script>
 
     <script src="../assets/script/myScript.js"></script>

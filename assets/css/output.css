@@ -582,6 +582,10 @@ video {
   left: 0px;
 }
 
+.tw-left-12{
+  left: 3rem;
+}
+
 .tw-right-0{
   right: 0px;
 }
@@ -772,10 +776,6 @@ video {
   border-radius: 0.125rem;
 }
 
-.tw-rounded-3xl{
-  border-radius: 1.5rem;
-}
-
 .tw-border{
   border-width: 1px;
 }
@@ -794,6 +794,10 @@ video {
 
 .tw-border-s-4{
   border-inline-start-width: 4px;
+}
+
+.tw-border-s-8{
+  border-inline-start-width: 8px;
 }
 
 .tw-border-dashed{
@@ -845,6 +849,11 @@ video {
   border-color: rgb(251 146 60 / var(--tw-border-opacity));
 }
 
+.tw-border-purple-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(192 132 252 / var(--tw-border-opacity));
+}
+
 .tw-border-rose-400{
   --tw-border-opacity: 1;
   border-color: rgb(251 113 133 / var(--tw-border-opacity));
@@ -858,6 +867,16 @@ video {
 .tw-border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.tw-border-s-purple-400{
+  --tw-border-opacity: 1;
+  border-inline-start-color: rgb(192 132 252 / var(--tw-border-opacity));
+}
+
+.tw-border-s-blue-400{
+  --tw-border-opacity: 1;
+  border-inline-start-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 
 .tw-bg-blue-400{
@@ -990,6 +1009,16 @@ video {
   background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 
+.tw-bg-purple-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 232 255 / var(--tw-bg-opacity));
+}
+
+.tw-bg-purple-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
+}
+
 .tw-bg-rose-400{
   --tw-bg-opacity: 1;
   background-color: rgb(251 113 133 / var(--tw-bg-opacity));
@@ -1023,6 +1052,11 @@ video {
 .tw-bg-yellow-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.tw-bg-blue-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
 .tw-object-cover{
@@ -1067,6 +1101,11 @@ video {
 .tw-px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.tw-px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .tw-px-7{
@@ -1136,6 +1175,10 @@ video {
 
 .tw-pb-14{
   padding-bottom: 3.5rem;
+}
+
+.tw-pb-2{
+  padding-bottom: 0.5rem;
 }
 
 .tw-pb-3{
@@ -1285,6 +1328,11 @@ video {
   color: rgb(107 134 187 / var(--tw-text-opacity));
 }
 
+.tw-text-purple-600{
+  --tw-text-opacity: 1;
+  color: rgb(147 51 234 / var(--tw-text-opacity));
+}
+
 .tw-text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1293,6 +1341,11 @@ video {
 .tw-text-yellow-300{
   --tw-text-opacity: 1;
   color: rgb(253 224 71 / var(--tw-text-opacity));
+}
+
+.tw-text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .tw-no-underline{
@@ -2153,6 +2206,98 @@ div:where(.swal2-container) .swal2-html-container {
   width: 10px;
   height: 10px;
   cursor: pointer;
+}
+
+.test {
+  height: auto;
+  width: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+
+.test::-webkit-scrollbar {
+  height: 8px;
+  /* Adjust scrollbar height for horizontal scroll */
+}
+
+.test::-webkit-scrollbar-thumb {
+  background-color: #a0aec0;
+  /* Tailwind gray-400 */
+  border-radius: 5px;
+  /* Rounded scrollbar thumb */
+}
+
+.test::-webkit-scrollbar-track {
+  background-color: #e2e8f0;
+  /* Tailwind gray-200 */
+}
+
+/* Custom scrollbar for Firefox */
+
+.test {
+  scrollbar-width: thin;
+  /* Thin scrollbar */
+  scrollbar-color: #f3f4f6 #ffffff;
+  /* Thumb color and track color */
+}
+
+/* Custom scrollbar for IE, Edge, and older browsers */
+
+.test {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* IE and Edge */
+}
+
+.custom-hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  /* Tailwind gray-200 */
+  flex: 1;
+  /* Make the line take up the available space */
+  margin: 0;
+  /* Remove default margins */
+}
+
+.time {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+
+.time::-webkit-scrollbar {
+  height: 8px;
+  /* Adjust scrollbar height for horizontal scroll */
+}
+
+.time::-webkit-scrollbar-thumb {
+  background-color: #a0aec0;
+  /* Tailwind gray-400 */
+  border-radius: 5px;
+  /* Rounded scrollbar thumb */
+}
+
+.time::-webkit-scrollbar-track {
+  background-color: #e2e8f0;
+  /* Tailwind gray-200 */
+}
+
+/* Custom scrollbar for Firefox */
+
+.time {
+  scrollbar-width: thin;
+  /* Thin scrollbar */
+  scrollbar-color: #f3f4f6 #ffffff;
+  /* Thumb color and track color */
+}
+
+/* Custom scrollbar for IE, Edge, and older browsers */
+
+.time {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* IE and Edge */
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */

@@ -777,6 +777,74 @@ div:where(.swal2-container) .swal2-html-container {
   cursor: pointer;
 }
 
+.test {
+  height: auto;
+  width: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+.test::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height for horizontal scroll */
+}
+
+.test::-webkit-scrollbar-thumb {
+  background-color: #a0aec0; /* Tailwind gray-400 */
+  border-radius: 5px; /* Rounded scrollbar thumb */
+}
+
+.test::-webkit-scrollbar-track {
+  background-color: #e2e8f0; /* Tailwind gray-200 */
+}
+
+/* Custom scrollbar for Firefox */
+.test {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #f3f4f6 #ffffff; /* Thumb color and track color */
+}
+
+/* Custom scrollbar for IE, Edge, and older browsers */
+.test {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* IE and Edge */
+}
+
+.custom-hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0; /* Tailwind gray-200 */
+  flex: 1; /* Make the line take up the available space */
+  margin: 0; /* Remove default margins */
+}
+
+.time {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+.time::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height for horizontal scroll */
+}
+
+.time::-webkit-scrollbar-thumb {
+  background-color: #a0aec0; /* Tailwind gray-400 */
+  border-radius: 5px; /* Rounded scrollbar thumb */
+}
+
+.time::-webkit-scrollbar-track {
+  background-color: #e2e8f0; /* Tailwind gray-200 */
+}
+
+/* Custom scrollbar for Firefox */
+.time {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #f3f4f6 #ffffff; /* Thumb color and track color */
+}
+
+/* Custom scrollbar for IE, Edge, and older browsers */
+.time {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* IE and Edge */
+}
+
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .mobile-hidden {

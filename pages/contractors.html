@@ -177,7 +177,7 @@
               >
                 <div class="col-12 col-lg-7">
                   <div class="row gy-1">
-                    <div class="col-lg-3 col-auto">
+                    <div class="col-lg-auto col-auto">
                       <div class="py-3">
                         <a
                           href="./dashboard.html"
@@ -187,7 +187,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-auto">
+                    <div class="col-lg-auto col-auto">
                       <div class="py-3">
                         <a
                           href="./staff.html"
@@ -197,7 +197,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-auto">
+                    <div class="col-lg-auto col-auto">
                       <div class="py-3">
                         <a
                           href="./equipments.html"
@@ -207,7 +207,7 @@
                         </a>
                       </div>
                     </div>
-                    <div class="col-lg-3 col-auto">
+                    <div class="col-lg-auto col-auto">
                       <div class="py-3">
                         <a
                           href="./contractors.html"
@@ -284,7 +284,7 @@
                                 alt=""
                               />
                             </div>
-                            <div>Add Con</div>
+                            <div>Add Contr</div>
                           </button>
                         </a>
                       </div>
@@ -682,6 +682,23 @@
           }
         });
       });
+    </script>
+
+    <script>
+      // Function to format date as YYYY-MM-DD
+      function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+      }
+
+      // Get the current date
+      const today = new Date();
+
+      // Set the value of the date inputs to today's date
+      document.getElementById("startDate").value = formatDate(today);
+      document.getElementById("endDate").value = formatDate(today);
     </script>
 
     <script src="../assets/script/myScript.js"></script>
