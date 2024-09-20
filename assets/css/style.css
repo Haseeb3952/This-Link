@@ -260,6 +260,41 @@
   background-color: #fafafb;
 }
 
+.staff-bar {
+  height: 660px;
+  overflow-y: scroll;
+}
+
+.yellow-circle {
+  height: 25px;
+  width: 25px;
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+.staff-bar::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height for horizontal scroll */
+}
+
+.staff-bar::-webkit-scrollbar-thumb {
+  background-color: #a0aec0; /* Tailwind gray-400 */
+  border-radius: 5px; /* Rounded scrollbar thumb */
+}
+
+.staff-bar::-webkit-scrollbar-track {
+  background-color: #e2e8f0; /* Tailwind gray-200 */
+}
+
+/* Custom scrollbar for Firefox */
+.staff-bar {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #f3f4f6 #ffffff; /* Thumb color and track color */
+}
+
+/* Custom scrollbar for IE, Edge, and older browsers */
+.staff-bar {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* IE and Edge */
+}
+
 .btn-reset-style:focus {
   outline: none;
   box-shadow: none !important;
@@ -849,6 +884,9 @@ div:where(.swal2-container) .swal2-html-container {
 @media (max-width: 575.98px) {
   .mobile-hidden {
     display: none;
+  }
+  iframe {
+    height: 300px;
   }
 }
 

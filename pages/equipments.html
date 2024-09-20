@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <title>This Link - Dashboard</title>
+    <title>This Link - Equipments</title>
   </head>
   <body>
-    <section>
+    <section class="bgDashboard">
       <div class="container-fluid">
         <div class="row gy-3 gy-3">
           <div class="col-12 col-lg-9">
@@ -178,7 +178,7 @@
 
             <div class="container-fluid">
               <div
-                class="row tw-border tw-rounded-lg my-3 align-items-center gy-2 pb-2"
+                class="row tw-border bg-white tw-rounded-lg my-3 align-items-center gy-2 pb-2"
               >
                 <div class="col-12 col-lg-7">
                   <div class="row gy-1">
@@ -316,324 +316,620 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-9 col-auto">
-                <table class="table border-1 mx-2 table-responsive">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Sun
-                          <p>7</p>
+                <div class="container p-0 mx-2">
+                  <div
+                    class="row g-3 tw-border tw-bg-white tw-p-3 align-items-center me-2 mt-lg-0 mt-2"
+                    style="border-radius: 10px 10px 0px 0px"
+                  >
+                    <div class="col-12 col-lg-4 mt-lg-0">
+                      <div
+                        class="d-flex align-items-center justify-content-lg-start gap-lg-3 gap-0 justify-content-between"
+                      >
+                        <div>
+                          <h6 class="tw-font-semibold">Calender</h6>
                         </div>
-                      </th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Mon
-                          <p>8</p>
+                        <div>
+                          <div
+                            class="d-flex align-items-center justify-content-center gap-2"
+                          >
+                            <div class="tw-border tw-rounded-lg">
+                              <button class="tw-px-3 tw-py-2">
+                                <img
+                                  src="../assets/images/calender-left-arrow.svg"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+
+                            <div class="tw-border tw-rounded-lg">
+                              <button class="tw-px-3 tw-py-2">
+                                <img
+                                  src="../assets/images/calender-right-arrow.svg"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </button>
+                            </div>
+                            <div>
+                              <h6 class="tw-font-semibold">May 2024</h6>
+                            </div>
+                          </div>
                         </div>
-                      </th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Tue
-                          <p>9</p>
-                        </div>
-                      </th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Wed
-                          <p>10</p>
-                        </div>
-                      </th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Thu
-                          <p>11</p>
-                        </div>
-                      </th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Fri
-                          <p>12</p>
-                        </div>
-                      </th>
-                      <th class="tw-border" scope="col">
-                        <div class="text-center tw-text-gray-500">
-                          Sat
-                          <p>13</p>
-                        </div>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">
-                        <h3>Haseeb</h3>
-                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
-                      </th>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-orange-400 p-2">
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mt-lg-0">
+                      <div
+                        class="d-flex justify-content-center align-items-center"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <button class="btn tw-font-semibold tw-text-gray-500">
+                            Day
+                          </button>
                           <button
-                            class="btn tw-bg-orange-400 text-white btn-sm"
+                            class="btn tw-font-semibold tw-text-black tw-border-b-yellow-300 tw-border-b-4"
                           >
-                            New Job
+                            Week
                           </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-green-400 p-2">
-                          <button class="btn tw-bg-green-400 text-white btn-sm">
-                            New Job
+                          <button class="btn tw-font-semibold tw-text-gray-500">
+                            Month
                           </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
                         </div>
-                      </td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-orange-400 p-2">
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mt-lg-0">
+                      <div class="d-flex justify-content-between">
+                        <div>
                           <button
-                            class="btn tw-bg-orange-400 text-white btn-sm"
+                            class="btn tw-bg-white tw-shadow w-100 d-flex gap-2 align-items-center mb-lg-0 mb-2"
                           >
-                            New Job
+                            <span class="text-dark">Resources</span>
+
+                            <span>
+                              <img
+                                src="../assets/images/bottom-arrow.svg"
+                                class="img-fluid"
+                                alt=""
+                              />
+                            </span>
                           </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
                         </div>
-                      </td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-cyan-400 p-2">
-                          <button class="btn tw-bg-cyan-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border"></td>
-                      <td class="tw-border"></td>
-                      <td class="tw-border"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <h3>Haseeb</h3>
-                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
-                      </th>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-blue-400 p-2">
-                          <button class="btn tw-bg-blue-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-blue-400 p-2">
-                          <button class="btn tw-bg-blue-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border"></td>
-                      <td class="tw-border"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-blue-400 p-2">
-                          <button class="btn tw-bg-blue-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <h3>Haseeb</h3>
-                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
-                      </th>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-rose-400 p-2">
-                          <button class="btn tw-bg-rose-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-rose-400 p-2">
-                          <button class="btn tw-bg-rose-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-rose-400 p-2">
-                          <button class="btn tw-bg-rose-400 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <h3>Haseeb</h3>
-                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
-                      </th>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-green-800 p-2">
-                          <button class="btn tw-bg-green-800 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-green-700 p-2">
-                          <button class="btn tw-bg-green-700 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-green-700 p-2">
-                          <button class="btn tw-bg-green-700 text-white btn-sm">
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
-                        </div>
-                      </td>
-                      <td class="tw-border"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <h3>Haseeb</h3>
-                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
-                      </th>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-neutral-400 p-2">
+                        <div>
                           <button
-                            class="btn tw-bg-neutral-400 text-white btn-sm"
+                            class="btn tw-bg-white tw-shadow w-100 d-flex gap-2 align-items-center"
                           >
-                            New Job
+                            <span>
+                              <img
+                                src="../assets/images/filter-icon.svg"
+                                class="img-fluid"
+                                alt=""
+                              />
+                            </span>
+                            <span class="text-dark">Filter</span>
                           </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
                         </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-neutral-400 p-2">
-                          <button
-                            class="btn tw-bg-neutral-400 text-white btn-sm"
-                          >
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table tw-border bg-white tw-rounded-lg">
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <input
+                            type="text"
+                            class="form-control bootstrap-input-reset-style border-0 tw-pb-3"
+                            style="width: 100px"
+                            placeholder="Search"
+                          />
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Sun
+                            <p>7</p>
+                          </div>
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Mon
+                            <p>8</p>
+                          </div>
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Tue
+                            <p>9</p>
+                          </div>
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Wed
+                            <p>10</p>
+                          </div>
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Thu
+                            <p>11</p>
+                          </div>
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Fri
+                            <p>12</p>
+                          </div>
+                        </th>
+                        <th class="tw-border" scope="col">
+                          <div class="text-center tw-text-gray-500">
+                            Sat
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <div class="yellow-circle">
+                                <p
+                                  class="tw-bg-yellow-300 tw-text-black rounded-circle"
+                                >
+                                  13
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <h3>Micheal</h3>
+                          <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                        </th>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-orange-400 p-2">
+                            <button
+                              class="btn tw-bg-orange-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-green-400 p-2">
+                            <button
+                              class="btn tw-bg-green-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-cyan-400 p-2">
+                            <button
+                              class="btn tw-bg-cyan-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-purple-400 p-2">
+                            <button
+                              class="btn tw-bg-purple-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+
+                        <td class="tw-border"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <h3>Haseeb</h3>
+                          <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                        </th>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-blue-400 p-2">
+                            <button
+                              class="btn tw-bg-blue-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-blue-400 p-2">
+                            <button
+                              class="btn tw-bg-blue-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border"></td>
+                        <td class="tw-border"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-blue-400 p-2">
+                            <button
+                              class="btn tw-bg-blue-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <h3>Haseeb</h3>
+                          <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                        </th>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-rose-400 p-2">
+                            <button
+                              class="btn tw-bg-rose-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-rose-400 p-2">
+                            <button
+                              class="btn tw-bg-rose-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-rose-400 p-2">
+                            <button
+                              class="btn tw-bg-rose-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <h3>Haseeb</h3>
+                          <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                        </th>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-green-800 p-2">
+                            <button
+                              class="btn tw-bg-green-800 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-green-700 p-2">
+                            <button
+                              class="btn tw-bg-green-700 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-green-700 p-2">
+                            <button
+                              class="btn tw-bg-green-700 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <h3>Haseeb</h3>
+                          <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                        </th>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-neutral-400 p-2">
+                            <button
+                              class="btn tw-bg-neutral-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-neutral-400 p-2">
+                            <button
+                              class="btn tw-bg-neutral-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-neutral-400 p-2">
+                            <button
+                              class="btn tw-bg-neutral-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                        <td class="tw-border p-0"></td>
+                        <td class="tw-border p-0">
+                          <div class="tw-border-s-4 tw-border-neutral-400 p-2">
+                            <button
+                              class="btn tw-bg-neutral-400 text-white btn-sm"
+                            >
+                              New Job
+                            </button>
+                            <p
+                              class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                            >
+                              08:00 am - 05:00 pm
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="sm:tw-ms-0 lg:tw-ms-32">
+                  <div class="container p-0 mx-2">
+                    <div
+                      class="row g-3 tw-border tw-bg-gray-50 tw-p-3 align-items-center me-2 mt-lg-0 mt-2"
+                    >
+                      <div class="col-6 mt-0">
+                        <h6 class="tw-font-semibold">Equipment Information</h6>
+                      </div>
+                      <div class="col-6 mt-0">
+                        <div class="d-flex justify-content-end">
+                          <a href="#" class="d-flex align-items-center gap-2">
+                            <div>
+                              <img
+                                src="../assets/images/pencil-icon.svg"
+                                class="img-fluid"
+                                alt=""
+                              />
+                            </div>
+                            <div>
+                              <p>Edit</p>
+                            </div>
+                          </a>
                         </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-neutral-400 p-2">
-                          <button
-                            class="btn tw-bg-neutral-400 text-white btn-sm"
-                          >
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
+                      </div>
+                    </div>
+                    <div
+                      class="row g-3 tw-border tw-bg-white tw-p-3 me-2 mt-lg-0 mt-2"
+                    >
+                      <div class="col-12 col-lg-4">
+                        <h6 class="tw-text-lightBlue">Name</h6>
+                        <h6 class="tw-font-semibold tw-py-1">60T - LC20</h6>
+                      </div>
+                      <div class="col-12 col-lg-4">
+                        <h6 class="tw-text-lightBlue">Model Number</h6>
+                        <h6 class="tw-font-semibold tw-py-1">DP-4500X</h6>
+                      </div>
+                      <div class="col-12 col-lg-4">
+                        <h6 class="tw-text-lightBlue">Serial Number</h6>
+                        <h6 class="tw-font-semibold tw-py-1">1234567890</h6>
+                      </div>
+
+                      <div class="col-12 col-lg-4">
+                        <h6 class="tw-text-lightBlue">Location</h6>
+                        <h6 class="tw-font-semibold tw-py-1">
+                          Workshop 2, Bay Area 5
+                        </h6>
+                      </div>
+                      <div class="col-12 col-lg-4">
+                        <h6 class="tw-text-lightBlue">Status</h6>
+                        <button
+                          class="btn tw-bg-green-500 tw-px-8 tw-font-semibold tw-my-1 text-white"
+                        >
+                          Active
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="row g-3 tw-border tw-bg-gray-50 tw-p-3 align-items-center me-2 mt-lg-0 mt-2"
+                    >
+                      <div class="col-6 mt-0">
+                        <h6 class="tw-font-semibold">Certifications</h6>
+                      </div>
+                      <div class="col-6 mt-0">
+                        <div class="d-flex justify-content-end">
+                          <a href="#" class="d-flex align-items-center gap-2">
+                            <div>
+                              <img
+                                src="../assets/images/pencil-icon.svg"
+                                class="img-fluid"
+                                alt=""
+                              />
+                            </div>
+                            <div>
+                              <p>Edit</p>
+                            </div>
+                          </a>
                         </div>
-                      </td>
-                      <td class="tw-border p-0"></td>
-                      <td class="tw-border p-0">
-                        <div class="tw-border-s-4 tw-border-neutral-400 p-2">
-                          <button
-                            class="btn tw-bg-neutral-400 text-white btn-sm"
-                          >
-                            New Job
-                          </button>
-                          <p
-                            class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
-                          >
-                            08:00 am - 05:00 pm
-                          </p>
+                      </div>
+                    </div>
+                    <div
+                      class="row g-3 tw-border tw-bg-white tw-p-3 me-2 mt-lg-0 mt-2"
+                    >
+                      <div class="col-12 col-lg-7">
+                        <h6 class="tw-text-lightBlue">Certification Type</h6>
+                        <h6 class="tw-font-semibold tw-py-1">ISO 9001</h6>
+                        <p>International Organization for Standardization</p>
+                      </div>
+                      <div class="col-12 col-lg-5">
+                        <div class=" ">
+                          <div>
+                            <h6 class="tw-text-lightBlue">
+                              Effective Date of Qualification
+                            </h6>
+
+                            <p class="tw-font-semibold">17 May, 2025</p>
+                          </div>
                         </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      </div>
+                      <div class="col-12 col-lg-7">
+                        <h6 class="tw-text-lightBlue">Institute</h6>
+
+                        <h6 class="tw-font-semibold tw-py-1">
+                          OSHA Certification
+                        </h6>
+                        <p>OSHA 10-Hour Construction Safety Certification</p>
+                      </div>
+                      <div class="col-12 col-lg-5">
+                        <div class=" ">
+                          <div>
+                            <h6 class="tw-text-lightBlue">
+                              Expiry Date of Qualification
+                            </h6>
+
+                            <p class="tw-font-semibold">17 May, 2025</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="row g-3 tw-border tw-bg-gray-50 tw-p-3 align-items-center me-2 mt-lg-0 mt-2"
+                    >
+                      <div class="col-6 mt-0">
+                        <h6 class="tw-font-semibold">Instruction Manual</h6>
+                      </div>
+                      <div class="col-6 mt-0">
+                        <div class="d-flex justify-content-end">
+                          <a href="#" class="d-flex align-items-center gap-2">
+                            <div>
+                              <img
+                                src="../assets/images/pencil-icon.svg"
+                                class="img-fluid"
+                                alt=""
+                              />
+                            </div>
+                            <div>
+                              <p>Edit</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="row g-3 tw-border tw-bg-white tw-p-3 me-2 mt-lg-0 mt-2"
+                    >
+                      <div class="col-12 col-lg-7">
+                        <h6 class="tw-text-lightBlue">Publication Date</h6>
+                        <h6 class="tw-font-semibold tw-py-1">26 June, 2023</h6>
+                        <a
+                          href="../assets/files/pdf-test.pdf"
+                          download=""
+                          class="tw-underline tw-font-bold tw-text-blue-700"
+                        >
+                          Download Instruction Manual 01
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="col-12 col-lg-3">
-                <div class="h-100 bg-white tw-rounded-lg tw-shadow">
+                <div class="bg-white tw-rounded-lg tw-shadow">
                   <div class="p-2">
                     <div
                       class="test p-2 tw-bg-gray-100 tw-rounded-lg tw-border"

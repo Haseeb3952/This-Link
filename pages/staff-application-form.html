@@ -12,23 +12,22 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
-    <!-- Flatpickr CSS -->
+    <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <!-- Flatpickr Month Select Plugin CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="../assets/css/output.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <title>This Link - Staff Creation</title>
+    <title>This Link - Job Application Form</title>
   </head>
   <body>
     <section>
@@ -186,7 +185,7 @@
             <div class="row my-2">
               <div class="col-12 col-lg-6">
                 <div class="tw-py-3">
-                  <h2 class="tw-font-bold">Add New Staff</h2>
+                  <h2 class="tw-font-bold">Add New Job</h2>
                 </div>
               </div>
               <div class="col-12 col-lg-6">
@@ -202,9 +201,10 @@
                   </div>
                   <div>
                     <button
-                      class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen"
+                      id="publishButton"
+                      class="btn text-white tw-py-2 tw-px-10 tw-bg-btnBgDarkGreen tw-font-medium"
                     >
-                      Next
+                      Publish
                     </button>
                   </div>
                 </div>
@@ -237,36 +237,41 @@
                 </div>
                 <div class="col-auto">
                   <div>
-                    <button
-                      class="btn tw-border-gray-300 tw-border-2 tw-bg-green-50 d-flex align-items-center gap-3"
-                    >
-                      <div
-                        class="tw-size-5 tw-bg-btnBgDarkGreen tw-font-bold tw-rounded-full tw-shadow-sm text-white tw-text-xs d-flex justify-content-center align-items-center"
-                      >
-                        2
-                      </div>
-                      <div class="tw-text-green-700 tw-font-medium">
-                        Professional Details
-                      </div>
-                    </button>
-                  </div>
-                </div>
-                <div class="col-auto">
-                  <div>
-                    <a href="./staff-application-form.html">
+                    <a href="./professional-details.html">
                       <button
-                        class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                        class="btn tw-border-staffBtnBorder tw-border-2 tw-bg-btnBgDarkGreen d-flex align-items-center gap-3"
                       >
                         <div
-                          class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                          class="tw-size-5 tw-border-white tw-border-2 tw-bg-btnBgDarkGreen tw-rounded-full text-white tw-text-xs d-flex justify-content-center align-items-center"
                         >
-                          3
+                          <img
+                            src="../assets/images/check-icon.svg"
+                            class="img-fluid"
+                            alt=""
+                          />
                         </div>
-                        <div class="tw-text-gray-400 tw-font-medium">
-                          Application Form
+                        <div class="tw-text-white tw-font-medium">
+                          Professional Details
                         </div>
                       </button>
                     </a>
+                  </div>
+                </div>
+
+                <div class="col-auto">
+                  <div>
+                    <button
+                      class="btn tw-border-gray-300 tw-border-2 tw-bg-gray-50 d-flex align-items-center gap-3"
+                    >
+                      <div
+                        class="tw-size-5 tw-bg-white tw-font-bold tw-rounded-full tw-shadow-sm tw-text-gray-400 tw-text-xs d-flex justify-content-center align-items-center"
+                      >
+                        3
+                      </div>
+                      <div class="tw-text-gray-400 tw-font-medium">
+                        Application Form
+                      </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -276,84 +281,90 @@
                   <div class="col-12">
                     <div class="sm:tw-px-12 lg:tw-px-20 tw-pb-32">
                       <h4 class="tw-py-5 tw-font-semibold">
-                        Add Professional Details
+                        Add Required Documents
                       </h4>
-
-                      <form class="tw-my-1">
+                      <form>
                         <div class="row gy-3">
-                          <div class="col-12 col-lg-6">
+                          <div class="col-12">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Qualification</label
+                              >Signatory Document</label
                             >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="e.g diploma"
-                            />
+                            <br />
+
+                            <div class="file-drop-zone">
+                              <div class="file-drop-zone-inner">
+                                <span
+                                  class="icon d-flex justify-content-center align-items-center"
+                                >
+                                  <img
+                                    src="../assets/images/file-upload-icon.svg"
+                                    class="img-fluid"
+                                    alt=""
+                                  />
+                                </span>
+                                <p>
+                                  Drag & drop file or
+                                  <span class="browse-file">browse file</span>
+                                </p>
+                                <p class="file-size">Max size: 20Mb</p>
+                                <input
+                                  type="file"
+                                  id="fileInput"
+                                  hidden
+                                  multiple
+                                />
+                              </div>
+                            </div>
+
+                            <!-- Uploaded Files Preview Section -->
+                            <div id="fileList"></div>
+
+                            <!-- Uploaded Files Preview Section -->
+                            <div id="fileList"></div>
+
+                            <div id="fileList"></div>
                           </div>
-                          <div class="col-12 col-lg-6">
+                        </div>
+                        <div class="row gy-3 tw-mt-10">
+                          <div class="col-12">
                             <label class="pb-2 tw-text-lightBlue tw-font-medium"
-                              >Institution Name</label
+                              >Read-Only Document</label
                             >
-                            <input
-                              type="text"
-                              class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                              placeholder="Institution Name"
-                            />
-                          </div>
-                          <label class="tw-text-lightBlue tw-font-medium"
-                            >Expiry Date</label
-                          >
-                          <br />
-                          <div class="col-12 col-lg-6">
-                            <div class="custom-date-container">
-                              <input
-                                id="datePicker"
-                                type="text"
-                                class="custom-date-input w-100"
-                                placeholder="Date"
-                              />
-                              <span class="date-arrow">
-                                <img
-                                  src="../assets/images/chevron-down.svg"
-                                  class="img-fluid"
-                                  alt=""
+                            <br />
+
+                            <!-- Read-Only Document Upload Zone -->
+                            <div class="file-drop-zone readonly-document">
+                              <div class="file-drop-zone-inner">
+                                <span
+                                  class="icon d-flex justify-content-center align-items-center"
+                                >
+                                  <img
+                                    src="../assets/images/file-upload-icon.svg"
+                                    class="img-fluid"
+                                    alt=""
+                                  />
+                                </span>
+                                <p>
+                                  Drag & drop Read-Only file or
+                                  <span class="browse-readonly-file"
+                                    >browse file</span
+                                  >
+                                </p>
+                                <p class="file-size">Max size: 20Mb</p>
+                                <input
+                                  type="file"
+                                  id="readonlyFileInput"
+                                  hidden
+                                  multiple
                                 />
-                              </span>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-12 col-lg-6">
-                            <div class="custom-month-container">
-                              <input
-                                id="monthPicker"
-                                type="text"
-                                class="custom-month-input w-100"
-                                placeholder="Month"
-                              />
-                              <span class="month-arrow">
-                                <img
-                                  src="../assets/images/chevron-down.svg"
-                                  class="img-fluid"
-                                  alt=""
-                                />
-                              </span>
-                            </div>
+
+                            <!-- Uploaded Read-Only Files Preview Section -->
+                            <div id="readonlyFileList"></div>
                           </div>
                         </div>
                       </form>
-
-                      <!-- Container for dynamically added qualifications -->
-                      <div id="qualificationsContainer"></div>
-
-                      <!-- Button to add more qualifications -->
-                      <div class="col-12">
-                        <button
-                          id="addQualificationBtn"
-                          class="btn w-100 tw-my-10 tw-bg-green-50 tw-font-bold tw-text-darkGreen tw-border-dashed tw-border-staffBtnBorder tw-border-2"
-                        >
-                          Add More Qualifications
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -375,124 +386,177 @@
       </div>
     </section>
 
+    <!-- File Upload JS -->
+
+    <script>
+      const fileDropZone = document.querySelector(".file-drop-zone");
+      const fileInput = document.querySelector("#fileInput");
+      const fileList = document.getElementById("fileList");
+
+      // Handle drag and drop
+      fileDropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        fileDropZone.classList.add("dragover");
+      });
+
+      fileDropZone.addEventListener("dragleave", () => {
+        fileDropZone.classList.remove("dragover");
+      });
+
+      fileDropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        fileDropZone.classList.remove("dragover");
+
+        const files = event.dataTransfer.files;
+        handleFiles(files);
+      });
+
+      document.querySelector(".browse-file").addEventListener("click", () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener("change", (event) => {
+        const files = event.target.files;
+        handleFiles(files);
+      });
+
+      function handleFiles(files) {
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2); // Convert bytes to MB and round to 2 decimal places
+
+          if (fileSizeInMB <= 20) {
+            // Create a new file preview element
+            const fileItem = document.createElement("div");
+            fileItem.classList.add("file-item");
+
+            const fileNameDisplay = document.createElement("span");
+            fileNameDisplay.classList.add("file-name");
+            fileNameDisplay.textContent = file.name;
+
+            const fileSizeDisplay = document.createElement("span");
+            fileSizeDisplay.classList.add("file-size-display");
+            fileSizeDisplay.textContent = `${fileSizeInMB} Mb`;
+
+            // Create delete icon using an image
+            const deleteIcon = document.createElement("span");
+            deleteIcon.classList.add("delete-icon");
+            const deleteImg = document.createElement("img");
+            deleteImg.src = "../assets/images/cross-icon.svg"; // Path to your delete icon image
+            deleteIcon.appendChild(deleteImg);
+
+            // Add click event to remove file
+            deleteIcon.addEventListener("click", () => {
+              fileItem.remove(); // Remove the file from the list when delete is clicked
+            });
+
+            fileItem.appendChild(fileNameDisplay);
+            fileItem.appendChild(fileSizeDisplay);
+            fileItem.appendChild(deleteIcon);
+
+            fileList.appendChild(fileItem); // Add the new file item to the file list
+          } else {
+            alert(`File size exceeds 20Mb limit: ${file.name}`);
+          }
+        }
+      }
+    </script>
+
+    <script>
+      // Read-Only Document Logic
+      const readonlyFileDropZone = document.querySelector(
+        ".file-drop-zone.readonly-document"
+      );
+      const readonlyFileInput = document.querySelector("#readonlyFileInput");
+      const readonlyFileList = document.getElementById("readonlyFileList");
+
+      // Handle drag and drop for Read-Only Document
+      readonlyFileDropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+        readonlyFileDropZone.classList.add("dragover");
+      });
+
+      readonlyFileDropZone.addEventListener("dragleave", () => {
+        readonlyFileDropZone.classList.remove("dragover");
+      });
+
+      readonlyFileDropZone.addEventListener("drop", (event) => {
+        event.preventDefault();
+        readonlyFileDropZone.classList.remove("dragover");
+
+        const files = event.dataTransfer.files;
+        handleReadonlyFiles(files);
+      });
+
+      document
+        .querySelector(".browse-readonly-file")
+        .addEventListener("click", () => {
+          readonlyFileInput.click();
+        });
+
+      readonlyFileInput.addEventListener("change", (event) => {
+        const files = event.target.files;
+        handleReadonlyFiles(files);
+      });
+
+      function handleReadonlyFiles(files) {
+        for (let i = 0; i < files.length; i++) {
+          const file = files[i];
+          const fileSizeInMB = (file.size / (1024 * 1024)).toFixed(2);
+
+          if (fileSizeInMB <= 20) {
+            const fileItem = document.createElement("div");
+            fileItem.classList.add("file-item");
+
+            const fileNameDisplay = document.createElement("span");
+            fileNameDisplay.classList.add("file-name");
+            fileNameDisplay.textContent = file.name;
+
+            const fileSizeDisplay = document.createElement("span");
+            fileSizeDisplay.classList.add("file-size-display");
+            fileSizeDisplay.textContent = `${fileSizeInMB} Mb`;
+
+            // Create delete icon for Read-Only Document
+            const deleteIcon = document.createElement("span");
+            deleteIcon.classList.add("delete-icon");
+            const deleteImg = document.createElement("img");
+            deleteImg.src = "../assets/images/cross-icon.svg"; // Custom delete icon for Read-Only
+            deleteIcon.appendChild(deleteImg);
+
+            // Add click event to remove the file
+            deleteIcon.addEventListener("click", () => {
+              fileItem.remove();
+            });
+
+            fileItem.appendChild(fileNameDisplay);
+            fileItem.appendChild(fileSizeDisplay);
+            fileItem.appendChild(deleteIcon);
+
+            readonlyFileList.appendChild(fileItem);
+          } else {
+            alert(`File size exceeds 20Mb limit: ${file.name}`);
+          }
+        }
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
       document
-        .getElementById("addQualificationBtn")
+        .getElementById("publishButton")
         .addEventListener("click", function () {
-          // Define the additional qualification section to be added dynamically
-          var newQualificationHTML = `
-          <div class="row gy-3 my-3">
-            <div class="col-12 col-lg-6">
-              <label class="pb-2 tw-text-lightBlue tw-font-medium">Qualification</label>
-              <input
-                type="text"
-                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                placeholder="e.g diploma"
-              />
-            </div>
-            <div class="col-12 col-lg-6">
-              <label class="pb-2 tw-text-lightBlue tw-font-medium">Institution Name</label>
-              <input
-                type="text"
-                class="form-control bootstrap-input-reset-style tw-transition-all tw-bg-gray-100"
-                placeholder="Institution Name"
-              />
-            </div>
-            <label class="tw-text-lightBlue tw-font-medium">Expiry Date</label>
-            <br />
-            <div class="col-12 col-lg-6">
-              <div class="custom-date-container">
-                <input
-                  type="text"
-                  class="custom-date-input w-100"
-                  placeholder="Date"
-                />
-                <span class="date-arrow">
-                  <img
-                    src="../assets/images/chevron-down.svg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </span>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="custom-month-container">
-                <input
-                  type="text"
-                  class="custom-month-input w-100"
-                  placeholder="Month"
-                />
-                <span class="month-arrow">
-                  <img
-                    src="../assets/images/chevron-down.svg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-        `;
-
-          // Append the new qualification section to the container
-          document
-            .getElementById("qualificationsContainer")
-            .insertAdjacentHTML("beforeend", newQualificationHTML);
+          Swal.fire({
+            title: "Staff Created!",
+            text: "Staff member has been created successfully. You can now view and manage the staff details in the system",
+            imageUrl: "../assets/images/job-published-icon.svg", // Replace with the path to your custom image
+            imageWidth: 100, // Adjust the width of the image
+            imageHeight: 100, // Adjust the height of the image
+            confirmButtonText: "OK",
+            customClass: {
+              container: "custom-alert-container",
+            },
+          });
         });
-    </script>
-
-    <!-- Flatpickr Month Select Plugin JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
-
-    <script>
-      // Initialize Flatpickr for the date picker
-      flatpickr("#datePicker", {
-        dateFormat: "d", // Only display the day
-        defaultDate: new Date(), // Set default to today's date
-      });
-
-      // Initialize Flatpickr for the month picker
-      flatpickr("#monthPicker", {
-        dateFormat: "F Y", // Format to show full month name and year
-        plugins: [
-          new monthSelectPlugin({
-            shorthand: true, // Display shorthand version of month names
-            dateFormat: "F Y", // Format of the month and year displayed
-            altInput: true, // Show an alternative input with formatted text
-            altFormat: "F Y", // Format for the alternative input
-          }),
-        ],
-      });
-    </script>
-
-    <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-    <script>
-      // Initialize Flatpickr with custom options
-      flatpickr("#datePicker", {
-        dateFormat: "d", // Only display the day
-        defaultDate: new Date(), // Set default to today's date
-      });
-    </script>
-
-    <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- Flatpickr Month Select Plugin JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
-
-    <script>
-      // Initialize Flatpickr for the month picker with only month selection
-      flatpickr("#monthPicker", {
-        plugins: [
-          new monthSelectPlugin({
-            shorthand: false, // Show full month names (e.g., "January")
-            dateFormat: "F Y", // Format to show full month name and year
-            altFormat: "F Y", // Alternate format for display (e.g., "January 2024")
-          }),
-        ],
-      });
     </script>
 
     <script src="../assets/script/myScript.js"></script>
