@@ -19,6 +19,11 @@
     />
 
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
@@ -318,49 +323,42 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-9">
-                <div class="container p-0 mx-2">
+                <div class="container mx-2 p-0">
                   <div
                     class="row g-3 tw-border tw-bg-white tw-p-3 align-items-center me-2 mt-lg-0 mt-2"
                     style="border-radius: 10px 10px 0px 0px"
                   >
-                    <div class="col-12 col-lg-4 mt-lg-0">
+                    <div class="col-12 col-lg-4">
                       <div
-                        class="d-flex align-items-center justify-content-lg-start gap-lg-3 gap-0 justify-content-between"
+                        class="d-flex align-items-center justify-content-lg-start gap-lg-3 justify-content-between"
                       >
-                        <div>
-                          <h6 class="tw-font-semibold">Calender</h6>
-                        </div>
-                        <div>
-                          <div
-                            class="d-flex align-items-center justify-content-center gap-2"
+                        <h6 class="tw-font-semibold">Calendar</h6>
+                        <div
+                          class="d-flex align-items-center justify-content-center gap-2"
+                        >
+                          <button
+                            class="tw-border tw-rounded-lg tw-px-3 tw-py-2"
                           >
-                            <div class="tw-border tw-rounded-lg">
-                              <button class="tw-px-3 tw-py-2">
-                                <img
-                                  src="../assets/images/calender-left-arrow.svg"
-                                  class="img-fluid"
-                                  alt=""
-                                />
-                              </button>
-                            </div>
-
-                            <div class="tw-border tw-rounded-lg">
-                              <button class="tw-px-3 tw-py-2">
-                                <img
-                                  src="../assets/images/calender-right-arrow.svg"
-                                  class="img-fluid"
-                                  alt=""
-                                />
-                              </button>
-                            </div>
-                            <div>
-                              <h6 class="tw-font-semibold">May 2024</h6>
-                            </div>
-                          </div>
+                            <img
+                              src="../assets/images/calender-left-arrow.svg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </button>
+                          <button
+                            class="tw-border tw-rounded-lg tw-px-3 tw-py-2"
+                          >
+                            <img
+                              src="../assets/images/calender-right-arrow.svg"
+                              class="img-fluid"
+                              alt=""
+                            />
+                          </button>
+                          <h6 class="tw-font-semibold">May 2024</h6>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4 mt-lg-0">
+                    <div class="col-12 col-lg-4">
                       <div
                         class="d-flex justify-content-center align-items-center"
                       >
@@ -379,42 +377,752 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-4 mt-lg-0">
-                      <div class="d-flex justify-content-between">
-                        <div>
-                          <button
-                            class="btn tw-bg-white tw-shadow w-100 d-flex gap-2 align-items-center mb-lg-0 mb-2"
-                          >
-                            <span class="text-dark">Resources</span>
-
-                            <span>
-                              <img
-                                src="../assets/images/bottom-arrow.svg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </span>
-                          </button>
-                        </div>
-                        <div>
-                          <button
-                            class="btn tw-bg-white tw-shadow w-100 d-flex gap-2 align-items-center"
-                          >
-                            <span>
-                              <img
-                                src="../assets/images/filter-icon.svg"
-                                class="img-fluid"
-                                alt=""
-                              />
-                            </span>
-                            <span class="text-dark">Filter</span>
-                          </button>
-                        </div>
+                    <div class="col-12 col-lg-4">
+                      <div class="d-flex justify-content-end">
+                        <button
+                          type="button"
+                          class="btn btn-light d-flex gap-2 align-items-center border"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        >
+                          <img
+                            src="../assets/images/filter-icon.svg"
+                            class="img-fluid"
+                            alt=""
+                          />
+                          <div>Filter</div>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="exampleModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div
+                    class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable"
+                  >
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5
+                          class="modal-title tw-font-semibold"
+                          id="exampleModalLabel"
+                        >
+                          Staff Filter
+                        </h5>
+                        <button
+                          type="button"
+                          class="btn-close bootstrap-input-reset-style"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body px-5">
+                        <div class="row justify-content-end">
+                          <div class="col-12 col-lg-4">
+                            <div class="d-flex justify-content-end">
+                              <input
+                                type="text"
+                                class="form-control mb-3 bootstrap-input-reset-style"
+                                placeholder="Search"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold mb-3">
+                          Educational Qualifications
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck1"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck1"
+                                >Bachelor's Degree
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck2"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck2"
+                                >Master's Degree
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold my-3">
+                          Professional Certifications
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck3"
+                                >Project Manager
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold my-3">
+                          Professional Certifications
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck3"
+                                >Project Manager
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold my-3">
+                          Professional Certifications
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck3"
+                                >Project Manager
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold my-3">
+                          Professional Certifications
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck3"
+                                >Project Manager
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold my-3">
+                          Professional Certifications
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck3"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck3"
+                                >Project Manager
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck4"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck4"
+                                >OSHA Safety Certification
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="tw-font-semibold my-3">
+                          Years of Experience
+                        </h6>
+                        <div class="row gy-3">
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck5"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck5"
+                                >Less than 1 year
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-12 col-lg-6">
+                            <div class="mb-1 form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck6"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck6"
+                                >1-3 years
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn tw-bg-yellow-300">
+                          Save changes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="row align-items-center">
+                  <div class="col-2">
+                    <div class="">
+                      <div class="border">
+                        <input
+                          type="text"
+                          class="form-control bootstrap-input-reset-style border-0"
+                          style="padding: 21px"
+                          placeholder="Search"
+                        />
+                      </div>
+                      <div class="border p-3 bg-white tw-cursor-pointer">
+                        <h3 class="tw-font-semibold pb-1">Staff Name 1</h3>
+                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                      </div>
+                      <div class="border p-3 bg-white tw-cursor-pointer">
+                        <h3 class="tw-font-semibold pb-1">Staff Name 1</h3>
+                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                      </div>
+                      <div class="border p-3 bg-white tw-cursor-pointer">
+                        <h3 class="tw-font-semibold pb-1">Staff Name 1</h3>
+                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                      </div>
+                      <div class="border p-3 bg-white tw-cursor-pointer">
+                        <h3 class="tw-font-semibold pb-1">Staff Name 1</h3>
+                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                      </div>
+                      <div class="border p-3 bg-white tw-cursor-pointer">
+                        <h3 class="tw-font-semibold pb-1">Staff Name 1</h3>
+                        <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="table-responsive">
+                      <table class="table tw-border bg-white tw-rounded-lg">
+                        <thead>
+                          <tr>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Sun
+                                <p>7</p>
+                              </div>
+                            </th>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Mon
+                                <p>8</p>
+                              </div>
+                            </th>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Tue
+                                <p>9</p>
+                              </div>
+                            </th>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Wed
+                                <p>10</p>
+                              </div>
+                            </th>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Thu
+                                <p>11</p>
+                              </div>
+                            </th>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Fri
+                                <div
+                                  class="d-flex justify-content-center align-items-center"
+                                >
+                                  <div
+                                    class="yellow-circle tw-bg-yellow-300 tw-rounded-full d-flex align-items-center justify-content-center"
+                                  >
+                                    <p class="tw-text-xs m-0 tw-text-black">
+                                      12
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </th>
+                            <th class="tw-border" scope="col">
+                              <div class="text-center tw-text-gray-500">
+                                Sat
+                                <p>13</p>
+                              </div>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-orange-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-orange-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-green-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-green-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-cyan-400 p-2">
+                                <button
+                                  class="btn tw-bg-cyan-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-purple-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-purple-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+
+                            <td class="tw-border"></td>
+                          </tr>
+                          <tr>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-blue-400 p-2">
+                                <button
+                                  class="btn tw-bg-blue-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-blue-400 p-2">
+                                <button
+                                  class="btn tw-bg-blue-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border"></td>
+                            <td class="tw-border"></td>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-blue-400 p-2">
+                                <button
+                                  class="btn tw-bg-blue-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-rose-400 p-2">
+                                <button
+                                  class="btn tw-bg-rose-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-rose-400 p-2">
+                                <button
+                                  class="btn tw-bg-rose-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0">
+                              <div class="tw-border-s-4 tw-border-rose-400 p-2">
+                                <button
+                                  class="btn tw-bg-rose-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0"></td>
+                          </tr>
+                          <tr>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-green-800 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-green-800 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-green-700 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-green-700 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-green-700 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-green-700 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border"></td>
+                          </tr>
+                          <tr>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-neutral-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-neutral-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-neutral-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-neutral-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-neutral-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-neutral-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                            <td class="tw-border p-0"></td>
+                            <td class="tw-border p-0">
+                              <div
+                                class="tw-border-s-4 tw-border-neutral-400 p-2"
+                              >
+                                <button
+                                  class="btn tw-bg-neutral-400 text-white btn-sm"
+                                >
+                                  New Job
+                                </button>
+                                <p
+                                  class="tw-text-gray-400 tw-font-normal time-text tw-my-1"
+                                >
+                                  08:00 am - 05:00 pm
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div> -->
                 <div class="table-responsive">
                   <table class="table tw-border bg-white tw-rounded-lg">
                     <thead>
@@ -463,12 +1171,10 @@
                             <div
                               class="d-flex justify-content-center align-items-center"
                             >
-                              <div class="yellow-circle">
-                                <p
-                                  class="tw-bg-yellow-300 tw-text-black rounded-circle"
-                                >
-                                  12
-                                </p>
+                              <div
+                                class="yellow-circle tw-bg-yellow-300 tw-rounded-full d-flex align-items-center justify-content-center"
+                              >
+                                <p class="tw-text-xs m-0 tw-text-black">12</p>
                               </div>
                             </div>
                           </div>
@@ -483,8 +1189,8 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">
-                          <h3>Micheal</h3>
+                        <th scope="row" class="tw-cursor-pointer">
+                          <h3>Staff Name 1</h3>
                           <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
                         </th>
                         <td class="tw-border p-0">
@@ -550,7 +1256,7 @@
                       </tr>
                       <tr>
                         <th scope="row">
-                          <h3>Haseeb</h3>
+                          <h3>Staff Name 2</h3>
                           <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
                         </th>
                         <td class="tw-border p-0">
@@ -602,7 +1308,7 @@
                       </tr>
                       <tr>
                         <th scope="row">
-                          <h3>Haseeb</h3>
+                          <h3>Staff Name 3</h3>
                           <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
                         </th>
                         <td class="tw-border p-0">
@@ -654,7 +1360,7 @@
                       </tr>
                       <tr>
                         <th scope="row">
-                          <h3>Haseeb</h3>
+                          <h3>Staff Name 4</h3>
                           <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
                         </th>
                         <td class="tw-border p-0"></td>
@@ -706,7 +1412,7 @@
                       </tr>
                       <tr>
                         <th scope="row">
-                          <h3>Haseeb</h3>
+                          <h3>Staff Name 5</h3>
                           <p class="tw-text-gray-400 tw-font-normal">8h/48h</p>
                         </th>
                         <td class="tw-border p-0">
@@ -773,7 +1479,7 @@
                   </table>
                 </div>
 
-                <div class="sm:tw-ms-0 lg:tw-ms-32">
+                <div class="sm:tw-ms-0 lg:tw-ms-32 tw-mb-3">
                   <div class="container p-0 mx-2">
                     <div
                       class="row g-3 tw-border tw-bg-gray-50 tw-p-3 align-items-center me-2 mt-lg-0 mt-2"

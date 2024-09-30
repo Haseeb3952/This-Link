@@ -270,6 +270,22 @@
   width: 25px;
 }
 
+#staffDropArea {
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+#staffDropArea.hovered {
+  background-color: red; /* Change background color to red */
+}
+
+#staffDropArea i {
+  cursor: pointer; /* Change cursor to pointer for icons */
+}
+
+.remove-icon {
+  color: red; /* Change color as desired */
+}
+
 /* Custom scrollbar for WebKit browsers (Chrome, Safari, etc.) */
 .staff-bar::-webkit-scrollbar {
   height: 8px; /* Adjust scrollbar height for horizontal scroll */
@@ -878,6 +894,10 @@ div:where(.swal2-container) .swal2-html-container {
 /* Custom scrollbar for IE, Edge, and older browsers */
 .time {
   -ms-overflow-style: -ms-autohiding-scrollbar; /* IE and Edge */
+}
+
+.hidden-content {
+  display: none;
 }
 
 /* // X-Small devices (portrait phones, less than 576px) */

@@ -1768,7 +1768,7 @@
                   class="tw-absolute tw-top-0 tw-bg-gray-100 tw-rounded-lg p-2 w-100"
                 >
                   <div class="row">
-                    <div class="col-8">
+                    <div class="col-9">
                       <div
                         class="input-group tw-border tw-rounded-lg tw-shadow mb-lg-0 mb-2"
                       >
@@ -1791,7 +1791,7 @@
                         />
                       </div>
                     </div>
-                    <div class="col-4 d-flex justify-content-end">
+                    <div class="col-3 d-flex justify-content-end">
                       <div>
                         <select
                           class="form-select bootstrap-input-reset-style tw-bg-slate-50"
@@ -1834,15 +1834,16 @@
                       class="d-flex gap-2 align-items-center justify-content-end"
                     >
                       <span class="tw-text-xs">Make Live</span>
-                      <span
-                        ><div class="form-check form-switch">
+                      <span>
+                        <div class="form-check form-switch">
                           <input
                             class="form-check-input"
                             type="checkbox"
                             id="flexSwitchCheckDefault"
                             onclick="toggleAlert()"
-                          /></div
-                      ></span>
+                          />
+                        </div>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -1850,7 +1851,8 @@
                 <div class="tw-p-3">
                   <div class="tw-py-2">
                     <div
-                      class="alert alert-hidden alert-success alert-dismissible fade show d-flex gap-1 tw-text-xs align-items-center"
+                      id="alertBox"
+                      class="alert alert-hidden alert-success alert-dismissible fade show d-flex gap-1 tw-text-xs align-items-center d-none"
                       role="alert"
                     >
                       <div>
@@ -1946,7 +1948,7 @@
                     <div class="row gy-3 tw-my-2 g-2">
                       <div class="col-auto">
                         <div
-                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-10 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
+                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-8 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
                           id="equipmentDropArea"
                           ondrop="drop(event)"
                           ondragover="allowDrop(event)"
@@ -1956,7 +1958,7 @@
                       </div>
                       <div class="col-auto">
                         <div
-                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-10 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
+                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-8 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
                           id="equipmentDropArea"
                           ondrop="drop(event)"
                           ondragover="allowDrop(event)"
@@ -1966,7 +1968,7 @@
                       </div>
                       <div class="col-auto">
                         <div
-                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-10 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
+                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-8 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
                           id="equipmentDropArea"
                           ondrop="drop(event)"
                           ondragover="allowDrop(event)"
@@ -1976,7 +1978,7 @@
                       </div>
                       <div class="col-auto">
                         <div
-                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-10 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
+                          class="tw-bg-gray-100 tw-rounded-md tw-text-xs tw-px-8 tw-py-2 tw-border-dashed tw-border-green-500 tw-border-2"
                           id="equipmentDropArea"
                           ondrop="drop(event)"
                           ondragover="allowDrop(event)"
@@ -2156,6 +2158,20 @@
           spanElement.removeAttribute("title");
         }
       });
+    </script>
+
+    <script>
+      function toggleAlert() {
+        const alertBox = document.getElementById("alertBox");
+        const checkBox = document.getElementById("flexSwitchCheckDefault");
+
+        // Toggle the 'd-none' class based on checkbox status
+        if (checkBox.checked) {
+          alertBox.classList.remove("d-none");
+        } else {
+          alertBox.classList.add("d-none");
+        }
+      }
     </script>
 
     <script src="../assets/script/myScript.js"></script>
